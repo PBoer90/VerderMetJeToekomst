@@ -9,10 +9,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Full Slider - Verder met je Toekomst Template</title>
+    <title>Verder met je Toekomst</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/responsiveCarousel.css" rel="stylesheet">
     <link href="material/css/ripples.min.css" rel="stylesheet">
     <link href="material/css/material-wfont.min.css" rel="stylesheet">
 
@@ -60,33 +61,37 @@
     </nav>
 
     <!-- Full Page Image Background Carousel Header -->
-    <header id="myCarousel" class="carousel slide">
+    <header id="mainCarousel" class="carousel slide">
         <!-- Indicators -->
 <!--        <ol class="carousel-indicators">-->
-<!--            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>-->
-<!--            <li data-target="#myCarousel" data-slide-to="1"></li>-->
-<!--            <li data-target="#myCarousel" data-slide-to="2"></li>-->
+<!--            <li data-target="#mainCarousel" data-slide-to="0" class="active"></li>-->
+<!--            <li data-target="#mainCarousel" data-slide-to="1"></li>-->
+<!--            <li data-target="#mainCarousel" data-slide-to="2"></li>-->
 <!--        </ol>-->
 
         <!-- Wrapper for Slides -->
         <div class="carousel-inner">
             <div class="item active">
-                <!-- Set the first background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('img/bg1.jpg');"></div>
                 <div class="carousel-content">
                     <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12 well">
+                        <div class="row well">
+                            <div class ="col-lg-12 ">
                                 <h1>Zoek jouw nieuwe stage of stagiares!</h1>
                                 <p>Begin hier met kiezen</p>
-                                <button class="btn btn-lg btn-primary btn-slide" data-target="#myCarousel" data-slide-to="1">Bedrijf</button>
-                                &nbsp;
-                                &nbsp;
-                                <button class="btn btn-lg btn-primary btn-slide" data-target="#myCarousel" data-slide-to="2">Student</button>
+                            </div>
+                            <div class="col-sm-5">
+                                <button class="btn btn-lg btn-primary btn-slide" data-target="#mainCarousel" data-slide-to="1">Bedrijf</button>
+                            </div>
+                                <div class="col-sm-2">&nbsp;</div>
+                            <div class="col-sm-5">
+                                <button class="btn btn-lg btn-primary btn-slide" data-target="#mainCarousel" data-slide-to="2">Student</button>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- Set the first background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('img/bg1.jpg');"></div>
+
             </div>
             <div class="item">
                 <!-- Set the second background image using inline CSS below. -->
@@ -120,6 +125,11 @@
         //Init Carousel
         $('.carousel').carousel({
             interval: 0 //changes the speed
+        })
+
+        //Slide listener
+        $('#mainCarousel').on('slide.bs.carousel', function () {
+            console.log('their was a disturbance in the force...');
         })
     </script>
 
