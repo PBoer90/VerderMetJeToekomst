@@ -42,7 +42,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Verder met je Toekomst</a>
+                <a class="navbar-brand"  data-target="#mainCarousel" data-slide-to="0" >Verder met je Toekomst</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -91,17 +91,21 @@
                 </div>
                 <!-- Set the first background image using inline CSS below. -->
                 <div class="fill" style="background-image:url('img/bg1.jpg');"></div>
+                <div class="carousel-caption">
+                    Gemaakt door Timo de Jong en Koen Hendriks. &copy; <?php echo date("Y",time()); ?><br/>
+                    <a href="http://serioushomebrew.eu" target="_blank"><img src="img/shb.png"/> </a>
+                </div>
 
             </div>
             <div class="item">
                 <!-- Set the second background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Bedrijf');"></div>
+                <div class="fill" style="background-image:url('img/bg3.jpg');"></div>
                 <div class="carousel-caption">
                 </div>
             </div>
             <div class="item">
                 <!-- Set the third background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Student');"></div>
+                <div class="fill" style="background-image:url('img/bg2.jpg');"></div>
                 <div class="carousel-caption">
                 </div>
             </div>
