@@ -48,10 +48,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">Bedrijven</a>
+                        <a href="#" data-toggle="modal" data-target="#company-dialog">Bedrijven</a>
                     </li>
                     <li>
-                        <a href="#">Studenten</a>
+                        <a href="#" data-toggle="modal" data-target="#student-dialog">Studenten</a>
                     </li>
                 </ul>
             </div>
@@ -107,6 +107,52 @@
             </div>
         </div>
     </header>
+
+    <div id="company-dialog" class="modal fade" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">Bedrijven</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Informatie voor bedrijven enzo, varias reprehenderit deserunt quem offendit,
+                        cillum proident ne reprehenderit, quem ad laborum, quo possumus praetermissum,
+                        si ne illustriora, hic appellat coniunctione, do labore aliqua quo probant. In
+                        probant voluptatibus quo mentitum est laboris. Quorum mandaremus graviterque.
+                        Mentitum id velit, dolor aut litteris, ea varias illustriora, ita commodo ita
+                        ingeniis, iis nulla appellat incurreret, aut irure amet summis pariatur ita ubi
+                        quis dolore veniam proident, consequat sed ingeniis.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-dismiss="modal">Sluit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="student-dialog" class="modal fade" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">Dialog</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Extra help info voor studenten enzo, varias reprehenderit deserunt quem offendit,
+                        cillum proident ne reprehenderit, quem ad laborum, quo possumus praetermissum,
+                        si ne illustriora, hic appellat coniunctione, do labore aliqua quo probant. In
+                        probant voluptatibus quo mentitum est laboris. Quorum mandaremus graviterque.
+                        Mentitum id velit, dolor aut litteris, ea varias illustriora, ita commodo ita
+                        ingeniis, iis nulla appellat incurreret, aut irure amet summis pariatur ita ubi
+                        quis dolore veniam proident, consequat sed ingeniis.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-dismiss="modal">Sluit</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
