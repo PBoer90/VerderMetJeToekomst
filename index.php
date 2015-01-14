@@ -73,7 +73,7 @@
         <div class="carousel-inner">
             <div class="item active">
                 <div class="carousel-content">
-                    <div class="container">
+                    <div class="container-fluid">
                         <div class="row well">
                             <div class ="col-lg-12 ">
                                 <h1>Zoek jouw nieuwe stage of stagiares!</h1>
