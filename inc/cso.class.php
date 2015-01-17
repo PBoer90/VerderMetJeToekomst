@@ -19,14 +19,14 @@ class CSO
      */
     public function authenticate($username, $password)
     {
-        $this->username = $username;
-        $this->password = $password;
+        $this->setUsername($username);
+        $this->setPassword($password);
 
         // get a token
-        $url = $this->baseUrl.'getApiKey.json';
+        $url = $this->getBaseUrl().'getApiKey.json';
         $post = array(
-            'username' => $this->username,
-            'password' => $this->password
+            'username' => $this->getUsername(),
+            'password' => $this->getPassword()
         );
 
         $result = $this->request($url, $post);
@@ -49,7 +49,8 @@ class CSO
      */
     private function validateApiKey()
     {
-        $url = $this->baseUrl.'isValidApiKey.json';
+        $url = $this->getBaseUrl().'isValidApiKey.json';
+
         $post = array(
             'apiKey' => $this->token
         );
@@ -61,6 +62,79 @@ class CSO
         {
             die('API KEY is invalid');
         }
+    }
+
+    public function getJob($code)
+    {
+        $url = $this->getBaseUrl().'getJob.json';
+
+        // We want to see every field
+        // TODO - make it customizable
+        $jobFieldSelection = array(
+            '__type__' => 'RemoteJobFieldselection',
+            'jobContent' => array(
+                '__type__' => 'RemoteJobContentFieldSelection',
+                'department' => true,
+                'employer' => true
+            ),
+            'jobExtraFields' => true,
+            'jobFeatures' => array(
+                '__type__' => 'RemoteJobFeaturesFieldSelection',
+                'applicationContact' => true,
+                'applicationProcedureContact' => true,
+                'applicationTypes' => true,
+                'detail' => true,
+                'employmentConditions' => true,
+                'informationContact' => true,
+                'location' => true,
+                'onlineJobApplicationTypes' => true,
+                'tvDistinction' => true
+            ),
+            'jobPublication' => array(
+                '__type__' => 'RemoteJobPublicationDataFieldSelection',
+                'publicationSets' => true
+            ),
+            'organisation' => true
+        );
+
+        $post = array(
+            'apiKey' => $this->getToken(),
+            'jobCode' => $code,
+            'remoteJobFieldSelection' => $jobFieldSelection
+        );
+
+        $result = $this->request($url, $post);
+
+        print_r($result);
+    }
+
+    public function getJobs()
+    {
+        $url = $this->getBaseUrl().'getJobs.json';
+
+        // TODO - make it customizable
+        $emptyJobFilter = array(
+            '__type__' => 'RemoteJobFilter'
+        );
+
+        // TODO - make it customizable
+        $emptyJobFieldSelection = array(
+            '__type__' => 'RemoteJobFieldselection',
+            'jobFeatures' => array(
+                '__type__' => 'RemoteJobFeaturesFieldSelection',
+                'location' => true
+            ),
+        );
+
+        $post = array(
+            'apiKey' => $this->token,
+            'filter' => $emptyJobFilter,
+            'fieldSelection' => $emptyJobFieldSelection
+        );
+
+        $result = $this->request($url, $post);
+
+        print_r($result);
     }
 
     /**
@@ -98,5 +172,70 @@ class CSO
         $result = json_decode($result);
 
         return $result;
+    }
+
+
+    /**
+     * @return string
+     */
+    public function getUsername()
+    {
+        return $this->username;
+    }
+
+    /**
+     * @param string $username
+     */
+    public function setUsername($username)
+    {
+        $this->username = $username;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPassword()
+    {
+        return $this->password;
+    }
+
+    /**
+     * @param string $password
+     */
+    public function setPassword($password)
+    {
+        $this->password = $password;
+    }
+
+    /**
+     * @return string
+     */
+    public function getToken()
+    {
+        return $this->token;
+    }
+
+    /**
+     * @param string $token
+     */
+    public function setToken($token)
+    {
+        $this->token = $token;
+    }
+
+    /**
+     * @return string
+     */
+    public function getBaseUrl()
+    {
+        return $this->baseUrl;
+    }
+
+    /**
+     * @param string $baseUrl
+     */
+    public function setBaseUrl($baseUrl)
+    {
+        $this->baseUrl = $baseUrl;
     }
 }
