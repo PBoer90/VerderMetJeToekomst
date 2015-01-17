@@ -8,6 +8,6 @@ $CSO = new CSO();
 
 $CSO->authenticate('timojong', 'FG4d%!k3hU');
 
-//$CSO->getJob('01535-852805227853');
+$CSO->getJob('01535-852805227853');
 
-$CSO->getJobs();
+//$CSO->getJobs();
