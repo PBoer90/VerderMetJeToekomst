@@ -5,7 +5,7 @@ class CSO
     private $username = '';
     private $password = '';
 
-    private $token = '';
+    private $key = '';
 
     private $baseUrl = 'https://sandbox.api.cso20.net/v1/JobAPI/';
 
@@ -33,7 +33,7 @@ class CSO
 
         if(isset($result->result))
         {
-            $this->token = $result->result;
+            $this->setKey($result->result);
         }
         else
         {
@@ -52,7 +52,7 @@ class CSO
         $url = $this->getBaseUrl().'isValidApiKey.json';
 
         $post = array(
-            'apiKey' => $this->token
+            'apiKey' => $this->getKey()
         );
 
         $result = $this->request($url, $post);
@@ -98,43 +98,54 @@ class CSO
         );
 
         $post = array(
-            'apiKey' => $this->getToken(),
+            'apiKey' => $this->getKey(),
             'jobCode' => $code,
             'remoteJobFieldSelection' => $jobFieldSelection
         );
 
-        $result = $this->request($url, $post);
-
-        print_r($result);
+        return $this->request($url, $post);
     }
 
     public function getJobs()
     {
         $url = $this->getBaseUrl().'getJobs.json';
 
-        // TODO - make it customizable
-        $emptyJobFilter = array(
-            '__type__' => 'RemoteJobFilter'
+        $post = array(
+            'apiKey' => $this->getKey(),
+            'filter' => array(
+                '__type__' => 'RemoteJobFilter'
+            ),
+            'fieldSelection' => array(
+                '__type__' => 'RemoteJobFieldselection',
+                'jobFeatures' => array(
+                    '__type__' => 'RemoteJobFeaturesFieldSelection',
+                    'location' => true
+                ),
+            )
         );
 
-        // TODO - make it customizable
-        $emptyJobFieldSelection = array(
-            '__type__' => 'RemoteJobFieldselection',
-            'jobFeatures' => array(
-                '__type__' => 'RemoteJobFeaturesFieldSelection',
-                'location' => true
-            ),
-        );
+        return $this->request($url, $post);
+    }
+
+    /**
+     * Extracts data for the enumeration type that is provided
+     *
+     * @param string $enumerationType EducationLevel|JobBranch|JobCategory|ContractType|Region
+     * @return array JSON Object
+     */
+    public function getJobCountForEnumeration($enumerationType)
+    {
+        $url = $this->getBaseUrl().'getJobCountForEnumeration.json';
 
         $post = array(
-            'apiKey' => $this->token,
-            'filter' => $emptyJobFilter,
-            'fieldSelection' => $emptyJobFieldSelection
+            'apiKey' => $this->getKey(),
+            'enumerationType' => $enumerationType,
+            'filter' => array(
+                '__type__' => 'RemoteJobFilter'
+            )
         );
 
-        $result = $this->request($url, $post);
-
-        print_r($result);
+        return $this->request($url, $post);
     }
 
     /**
@@ -210,17 +221,17 @@ class CSO
     /**
      * @return string
      */
-    public function getToken()
+    public function getKey()
     {
-        return $this->token;
+        return $this->key;
     }
 
     /**
-     * @param string $token
+     * @param string $key
      */
-    public function setToken($token)
+    public function setKey($key)
     {
-        $this->token = $token;
+        $this->key = $key;
     }
 
     /**
