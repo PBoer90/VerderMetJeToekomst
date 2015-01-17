@@ -8,6 +8,10 @@ $CSO = new CSO();
 
 $CSO->authenticate('timojong', 'FG4d%!k3hU');
 
-$CSO->getJob('01535-852805227853');
+print_r($CSO->getJobCountForEnumeration('Region'));
 
-//$CSO->getJobs();
+//print_r($CSO->getJob('01310-489407'));
+
+//print_r($CSO->searchJobs('CWD.0806'));
+
+//print_r($CSO->getJobs());
