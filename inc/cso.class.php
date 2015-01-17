@@ -139,6 +139,46 @@ class CSO
     }
 
     /**
+     * TODO - multiple educations
+     * TODO - location searching
+     *
+     * @param string $education Education code
+     * @return array JSON Object
+     */
+    public function searchJobs($education)
+    {
+        $url = $this->getBaseUrl().'getJobs.json';
+
+        $post = array(
+            'apiKey' => $this->getKey(),
+            'filter' => array(
+                '__type__' => 'RemoteJobFilter',
+                'featuresFilter' => array(
+                    '__type__' => 'RemoteJobFeaturesFilter',
+                    'detailFilter' => array(
+                        '__type__' => 'RemoteJobDetailFilter',
+                        'educationLevels' => array(
+                            array(
+                                '__type__' => 'EducationLevel',
+                                'code' => $education
+                            )
+                        )
+                    )
+                )
+            ),
+            'fieldSelection' => array(
+                '__type__' => 'RemoteJobFieldselection',
+                'jobFeatures' => array(
+                    '__type__' => 'RemoteJobFeaturesFieldSelection',
+                    'location' => true
+                ),
+            )
+        );
+
+        return $this->request($url, $post);
+    }
+
+    /**
      * Extracts data for the enumeration type that is provided
      *
      * @param string $enumerationType EducationLevel|JobBranch|JobCategory|ContractType|Region
