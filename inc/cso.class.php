@@ -64,6 +64,12 @@ class CSO
         }
     }
 
+    /**
+     * Extracts data for the provided job code
+     *
+     * @param string $code The job code
+     * @return array JSON Object
+     */
     public function getJob($code)
     {
         $url = $this->getBaseUrl().'getJob.json';
@@ -106,6 +112,11 @@ class CSO
         return $this->request($url, $post);
     }
 
+    /**
+     * List of all the jobs
+     *
+     * @return array JSON object
+     */
     public function getJobs()
     {
         $url = $this->getBaseUrl().'getJobs.json';
