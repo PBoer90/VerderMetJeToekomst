@@ -4,6 +4,14 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+* {
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
 html,
 body {
     height: 100%;
@@ -33,4 +41,35 @@ body {
 
 footer {
     margin: 50px 0;
+}
+
+#slide-navigation{
+    position: absolute;
+    background-color: #FFFFFF;
+    margin-top: 75px;
+    cursor: pointer;
+    opacity: 0;
+    -webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    -ms-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+}
+
+#slide-navigation-btn{
+    -webkit-animation: rotate-in 800ms ease-out 0ms 1;
+    animation: rotate-in 800ms ease-out 0ms 1;
+}
+
+@keyframes rotate-in {
+    from {-webkit-transform:rotate(0deg);}
+    to {-webkit-transform:rotate(-360deg);}
+}
+
+.appear{
+    opacity: 1 !important;
+}
+
+.disappear{
+    opacity: 0 !important;
 }

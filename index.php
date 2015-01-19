@@ -5,7 +5,8 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -14,6 +15,8 @@
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/responsiveCarousel.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/icon-x.css" rel="stylesheet">
     <link href="material/css/ripples.min.css" rel="stylesheet">
     <link href="material/css/material-wfont.min.css" rel="stylesheet">
 
@@ -34,6 +37,9 @@
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
+            <button class="btn" id="slide-navigation">
+                <i class="mdi-navigation-arrow-back icon-3x" id="slide-navigation-btn"></i>
+            </button>
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -71,12 +77,12 @@
 
         <!-- Wrapper for Slides -->
         <div class="carousel-inner">
-            <div class="item active">
+            <div class="item active" id="choice-welcome">
                 <div class="carousel-content">
                     <div class="container-fluid">
                         <div class="row well">
                             <div class ="col-lg-12 ">
-                                <h1>Zoek jouw nieuwe stage of stagiares!</h1>
+                                <h1>Zoek jouw nieuwe stage of stagiaires!</h1>
                                 <p>Begin hier met kiezen</p>
                             </div>
                             <div class="col-sm-5">
@@ -91,22 +97,26 @@
                 </div>
                 <!-- Set the first background image using inline CSS below. -->
                 <div class="fill" style="background-image:url('img/bg1.jpg');"></div>
-                <div class="carousel-caption">
-                    Gemaakt door Timo de Jong en Koen Hendriks. &copy; <?php echo date("Y",time()); ?><br/>
-                    <a href="http://serioushomebrew.eu" target="_blank"><img src="img/shb.png"/> </a>
+                <div class="carousel-caption ">
+                    <span class="shb">Gemaakt door Timo de Jong en Koen Hendriks. &copy; <?php echo date("Y",time()); ?></span><br/>
+                    <a href="http://serioushomebrew.eu" target="_blank" class="hidden-xs hidden-sm"><img src="img/shb.png"/> </a>
                 </div>
 
             </div>
-            <div class="item">
+            <div class="item" id="choice-company">
                 <!-- Set the second background image using inline CSS below. -->
                 <div class="fill" style="background-image:url('img/bg3.jpg');"></div>
-                <div class="carousel-caption">
+                <div class="carousel-content">
+                    <div class="container-fluid">
+                    </div>
                 </div>
             </div>
-            <div class="item">
+            <div class="item" id="choice-student">
                 <!-- Set the third background image using inline CSS below. -->
                 <div class="fill" style="background-image:url('img/bg2.jpg');"></div>
-                <div class="carousel-caption">
+                <div class="carousel-content">
+                    <div class="container-fluid">
+                    </div>
                 </div>
             </div>
         </div>
@@ -166,21 +176,13 @@
 
     <script src="material/js/ripples.min.js"></script>
     <script src="material/js/material.min.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/misc.js"></script>
     <script>
         //Init Material Scripts
         $(document).ready(function() {
             $.material.init();
-        });
-
-        //Init Carousel
-        $('.carousel').carousel({
-            interval: 0 //changes the speed
-        })
-
-        //Slide listener
-        $('#mainCarousel').on('slide.bs.carousel', function () {
-            console.log('their was a disturbance in the force...');
-        })
+       });
     </script>
 
 </body>
