@@ -28,7 +28,7 @@ class Api_Resources_CSO_Enumeration
     /**
      * Returns all the educations we got
      *
-     * @return array All the educations we got
+     * @return array Educations
      */
     public function getEducations()
     {
