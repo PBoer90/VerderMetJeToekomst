@@ -115,57 +115,73 @@ class CSO
     /**
      * List of all the jobs
      *
+     * @param string|array [optional] $education The education code(s) to search for
+     * @param string|array [optional] $region The region code(s) to search for
      * @return array JSON object
      */
-    public function getJobs()
+    public function getJobs($education = null, $region = null)
     {
         $url = $this->getBaseUrl().'getJobs.json';
 
-        $post = array(
-            'apiKey' => $this->getKey(),
-            'filter' => array(
-                '__type__' => 'RemoteJobFilter'
-            ),
-            'fieldSelection' => array(
-                '__type__' => 'RemoteJobFieldselection',
-                'jobFeatures' => array(
-                    '__type__' => 'RemoteJobFeaturesFieldSelection',
-                    'location' => true
-                ),
+        $remoteJobFilter = array(
+            '__type__' => 'RemoteJobFilter',
+            'featuresFilter' => array(
+                '__type__' => 'RemoteJobFeaturesFilter',
+                'detailFilter' => array(
+                    '__type__' => 'RemoteJobDetailFilter',
+                    'educationLevels' => array(),
+                    'regions' => array()
+                )
             )
         );
 
-        return $this->request($url, $post);
-    }
+        if($education !== null)
+        {
+            if(is_array($education))
+            {
+                foreach($education as $value)
+                {
+                    $remoteJobFilter['featuresFilter']['detailFilter']['educationLevels'][] = array(
+                        '__type__' => 'EducationLevel',
+                        'code' => $value
+                    );
+                }
+            }
 
-    /**
-     * TODO - multiple educations
-     * TODO - location searching
-     *
-     * @param string $education Education code
-     * @return array JSON Object
-     */
-    public function searchJobs($education)
-    {
-        $url = $this->getBaseUrl().'getJobs.json';
+            if(is_string($education))
+            {
+                $remoteJobFilter['featuresFilter']['detailFilter']['educationLevels'][] = array(
+                    '__type__' => 'EducationLevel',
+                    'code' => $education
+                );
+            }
+        }
+
+        if($region !== null)
+        {
+            if(is_array($region))
+            {
+                foreach($region as $value)
+                {
+                    $remoteJobFilter['featuresFilter']['detailFilter']['regions'][] = array(
+                        '__type__' => 'Region',
+                        'code' => $value
+                    );
+                }
+            }
+
+            if(is_string($region))
+            {
+                $remoteJobFilter['featuresFilter']['detailFilter']['regions'][] = array(
+                    '__type__' => 'Region',
+                    'code' => $region
+                );
+            }
+        }
 
         $post = array(
             'apiKey' => $this->getKey(),
-            'filter' => array(
-                '__type__' => 'RemoteJobFilter',
-                'featuresFilter' => array(
-                    '__type__' => 'RemoteJobFeaturesFilter',
-                    'detailFilter' => array(
-                        '__type__' => 'RemoteJobDetailFilter',
-                        'educationLevels' => array(
-                            array(
-                                '__type__' => 'EducationLevel',
-                                'code' => $education
-                            )
-                        )
-                    )
-                )
-            ),
+            'filter' => $remoteJobFilter,
             'fieldSelection' => array(
                 '__type__' => 'RemoteJobFieldselection',
                 'jobFeatures' => array(
