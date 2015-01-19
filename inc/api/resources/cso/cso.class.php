@@ -1,14 +1,46 @@
 <?php
 
-class CSO
+class Api_Resources_CSO
 {
+    /**
+     * @var object $enumeration The Enumeration object
+     */
+    public $enumeration;
+
+    /**
+     * @var object $filter The filter object
+     */
+    private $filter;
+
+    /**
+     * @var string $username The Api user name
+     */
     private $username = '';
+
+    /**
+     * @var string $password The Api user password
+     */
     private $password = '';
 
+    /**
+     * @var string $key The Api key that we use for api request
+     */
     private $key = '';
 
+    /**
+     * @var string $baseUrl The base url for the Api
+     */
     private $baseUrl = 'https://sandbox.api.cso20.net/v1/JobAPI/';
 
+
+    /**
+     * Initializes the enumeration and filter object
+     */
+    public function __construct()
+    {
+        $this->enumeration = new Api_Resources_CSO_Enumeration();
+        $this->filter = new Api_Resources_CSO_Filter();
+    }
 
     /**
      * Authenticates with the server, the server will then provided us with an Api Key
