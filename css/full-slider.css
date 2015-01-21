@@ -56,16 +56,6 @@ footer {
     transition: opacity .5s ease-in-out;
 }
 
-#slide-navigation-btn{
-    -webkit-animation: rotate-in 800ms ease-out 0ms 1;
-    animation: rotate-in 800ms ease-out 0ms 1;
-}
-
-@keyframes rotate-in {
-    from {-webkit-transform:rotate(0deg);}
-    to {-webkit-transform:rotate(-360deg);}
-}
-
 .appear{
     opacity: 1 !important;
 }
