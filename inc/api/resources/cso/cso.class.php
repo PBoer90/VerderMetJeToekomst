@@ -13,6 +13,11 @@ class Api_Resources_CSO
     private $filter;
 
     /**
+     * @var object $parser The parser object
+     */
+    private $parser;
+
+    /**
      * @var string $username The Api user name
      */
     private $username = '';
@@ -40,6 +45,7 @@ class Api_Resources_CSO
     {
         $this->enumeration = new Api_Resources_CSO_Enumeration();
         $this->filter = new Api_Resources_CSO_Filter();
+        $this->parser = new Api_Resources_CSO_Parser();
     }
 
     /**
