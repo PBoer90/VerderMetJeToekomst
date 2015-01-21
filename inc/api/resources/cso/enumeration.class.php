@@ -29,13 +29,17 @@ class Api_Resources_CSO_Enumeration
      * Returns the education code for the given education name
      *
      * @param string $name The education name
-     * @return string The education code
+     * @return mixed The education code, if we can find the matching education else false
      */
     public function getEducationCode($name)
     {
         if(isset($this->educations[strtolower($name)]))
         {
             return $this->educations[strtolower($name)];
+        }
+        else
+        {
+            return false;
         }
     }
 
@@ -53,13 +57,17 @@ class Api_Resources_CSO_Enumeration
      * Returns the region code for the given region name
      *
      * @param string $name The region name
-     * @return string The region code
+     * @return mixed The region code, if we can find the matching region else false
      */
     public function getRegionCode($name)
     {
         if(isset($this->regions[strtolower($name)]))
         {
             return $this->regions[strtolower($name)];
+        }
+        else
+        {
+            return false;
         }
     }
 
