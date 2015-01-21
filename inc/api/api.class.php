@@ -29,10 +29,16 @@ class Api
      */
     public function getJob($id)
     {
-        if(strstr($id, '-'))
+        $parts = explode('-', $id);
+        $resourceIdentifier = array_shift($parts);
+        $id = implode('-', $parts);
+
+        switch($resourceIdentifier)
         {
-            $CSO = $this->getResource('CSO');
-            return $CSO->getJob($id);
+            case 'cso':
+                $CSO = $this->getResource('CSO');
+                return $CSO->getJob($id);
+                break;
         }
     }
 
