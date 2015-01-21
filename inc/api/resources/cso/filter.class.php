@@ -3,13 +3,21 @@
 class Api_Resources_CSO_Filter
 {
     /**
+     * @var Api_Resources_CSO_Enumeration $enumeration The Enumeration object
+     */
+    public $enumeration;
+
+    /**
      * Creates the filter array
      *
      * @param array $filter Options we want to filter
+     * @param Api_Resources_CSO_Enumeration $enumeration The Enumeration object
      * @return array
      */
-    public function create($filter)
+    public function create($filter, $enumeration)
     {
+        $this->enumeration = $enumeration;
+
         $_filter = array(
             '__type__' => 'RemoteJobFilter',
             'featuresFilter' => array(
@@ -48,19 +56,21 @@ class Api_Resources_CSO_Filter
             {
                 foreach($education as $value)
                 {
-                    $_filter['featuresFilter']['detailFilter']['educationLevels'][] = array(
-                        '__type__' => 'EducationLevel',
-                        'code' => $value
-                    );
+                    $this->createEducationFilter($_filter, $value);
                 }
             }
 
             if(is_string($education))
             {
-                $education['featuresFilter']['detailFilter']['educationLevels'][] = array(
-                    '__type__' => 'EducationLevel',
-                    'code' => $education
-                );
+                $educationCode = $this->enumeration->getEducationCode($education);
+
+                if($educationCode != false)
+                {
+                    $_filter['featuresFilter']['detailFilter']['educationLevels'][] = array(
+                        '__type__' => 'EducationLevel',
+                        'code' => $educationCode
+                    );
+                }
             }
         }
     }
@@ -79,19 +89,21 @@ class Api_Resources_CSO_Filter
             {
                 foreach($region as $value)
                 {
-                    $_filter['featuresFilter']['detailFilter']['regions'][] = array(
-                        '__type__' => 'Region',
-                        'code' => $value
-                    );
+                    $this->createRegionFilter($_filter, $value);
                 }
             }
 
             if(is_string($region))
             {
-                $_filter['featuresFilter']['detailFilter']['regions'][] = array(
-                    '__type__' => 'Region',
-                    'code' => $region
-                );
+                $regionCode = $this->enumeration->getRegionCode($region);
+
+                if($regionCode != false)
+                {
+                    $_filter['featuresFilter']['detailFilter']['regions'][] = array(
+                        '__type__' => 'Region',
+                        'code' => $regionCode
+                    );
+                }
             }
         }
     }
