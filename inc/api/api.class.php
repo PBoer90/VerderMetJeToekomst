@@ -47,7 +47,7 @@ class Api
         $jobs = array();
 
         $CSO = $this->getResource('CSO');
-        array_push($jobs, $CSO->getJobs());
+        array_push($jobs, $CSO->getJobs($filter));
 
         return $jobs;
     }
@@ -65,6 +65,16 @@ class Api
         $educations = array_merge($educations, $CSO->enumeration->getEducations());
 
         return $educations;
+    }
+
+    public function getRegions()
+    {
+        $regions = array();
+
+        $CSO = $this->getResource('CSO');
+        $regions = array_merge($regions, $CSO->enumeration->getRegions());
+
+        return $regions;
     }
 
     /**
