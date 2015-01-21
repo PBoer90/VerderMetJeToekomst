@@ -153,69 +153,14 @@ class Api_Resources_CSO
     /**
      * List of all the jobs
      *
-     * @param string|array [optional] $education The education code(s) to search for
-     * @param string|array [optional] $region The region code(s) to search for
+     * @param mixed $filter An array with filters
      * @return array JSON object
      */
-    public function getJobs($education = null, $region = null)
+    public function getJobs($filter)
     {
         $url = $this->getBaseUrl().'getJobs.json';
 
-        $remoteJobFilter = array(
-            '__type__' => 'RemoteJobFilter',
-            'featuresFilter' => array(
-                '__type__' => 'RemoteJobFeaturesFilter',
-                'detailFilter' => array(
-                    '__type__' => 'RemoteJobDetailFilter',
-                    'educationLevels' => array(),
-                    'regions' => array()
-                )
-            )
-        );
-
-        if($education !== null)
-        {
-            if(is_array($education))
-            {
-                foreach($education as $value)
-                {
-                    $remoteJobFilter['featuresFilter']['detailFilter']['educationLevels'][] = array(
-                        '__type__' => 'EducationLevel',
-                        'code' => $value
-                    );
-                }
-            }
-
-            if(is_string($education))
-            {
-                $remoteJobFilter['featuresFilter']['detailFilter']['educationLevels'][] = array(
-                    '__type__' => 'EducationLevel',
-                    'code' => $education
-                );
-            }
-        }
-
-        if($region !== null)
-        {
-            if(is_array($region))
-            {
-                foreach($region as $value)
-                {
-                    $remoteJobFilter['featuresFilter']['detailFilter']['regions'][] = array(
-                        '__type__' => 'Region',
-                        'code' => $value
-                    );
-                }
-            }
-
-            if(is_string($region))
-            {
-                $remoteJobFilter['featuresFilter']['detailFilter']['regions'][] = array(
-                    '__type__' => 'Region',
-                    'code' => $region
-                );
-            }
-        }
+        $remoteJobFilter = $this->filter->create($filter);
 
         $post = array(
             'apiKey' => $this->getKey(),
