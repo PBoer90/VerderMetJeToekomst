@@ -224,12 +224,15 @@ class Api_Resources_CSO
                 '__type__' => 'RemoteJobFieldselection',
                 'jobFeatures' => array(
                     '__type__' => 'RemoteJobFeaturesFieldSelection',
-                    'location' => true
+                    'detail' => true,
+                    'employmentConditions' => true,
+                    'location' => true,
                 ),
+                'organisation' => true
             )
         );
 
-        return $this->request($url, $post);
+        return $this->parser->parseJobs($this->request($url, $post));
     }
 
     /**
