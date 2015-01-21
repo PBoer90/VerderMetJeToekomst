@@ -3,17 +3,17 @@
 class Api_Resources_CSO
 {
     /**
-     * @var object $enumeration The Enumeration object
+     * @var Api_Resources_CSO_Enumeration $enumeration The Enumeration object
      */
     public $enumeration;
 
     /**
-     * @var object $filter The filter object
+     * @var Api_Resources_CSO_Filter $filter The filter object
      */
     private $filter;
 
     /**
-     * @var object $parser The parser object
+     * @var Api_Resources_CSO_Parser $parser The parser object
      */
     private $parser;
 
