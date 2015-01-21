@@ -160,7 +160,7 @@ class Api_Resources_CSO
     {
         $url = $this->getBaseUrl().'getJobs.json';
 
-        $remoteJobFilter = $this->filter->create($filter);
+        $remoteJobFilter = $this->filter->create($filter, $this->enumeration);
 
         $post = array(
             'apiKey' => $this->getKey(),
