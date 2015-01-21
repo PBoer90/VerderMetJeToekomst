@@ -147,7 +147,7 @@ class Api_Resources_CSO
             'remoteJobFieldSelection' => $jobFieldSelection
         );
 
-        return $this->request($url, $post);
+        return $this->parser->parseJob($this->request($url, $post));
     }
 
     /**
