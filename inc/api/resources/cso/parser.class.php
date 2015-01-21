@@ -22,7 +22,7 @@ class Api_Resources_CSO_Parser
 
             $newJob['name'] = $job->content->name;
             $newJob['description'] = $job->content->description;
-            $newJob['requirements'] = $job->content->requuirements;
+            $newJob['requirements'] = $job->content->requirements;
             $newJob['otherDetails'] = $job->content->otherDetails;
 
             $newJob['employer']['description'] = $job->content->employer->description;
