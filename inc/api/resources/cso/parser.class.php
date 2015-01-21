@@ -12,40 +12,43 @@ class Api_Resources_CSO_Parser
      */
     public function parseJobs($jobs)
     {
-        $jobs = $jobs->result;
-
         $newJobs = array();
 
-        foreach($jobs as $job)
+        if(isset($jobs->result))
         {
-            $newJob = array();
+            $jobs = $jobs->result;
 
-            $newJob['id'] = 'cso-'.$job->code;
+            foreach($jobs as $job)
+            {
+                $newJob = array();
 
-            $newJob['jobCount'] = $job->features->featuresDetail->jobCount;
+                $newJob['id'] = 'cso-'.$job->code;
 
-            $newJob['organisation']['name'] = $job->organisation->name;
+                $newJob['jobCount'] = $job->features->featuresDetail->jobCount;
 
-            $newJob['location']['latitude'] = $job->features->location->latitude;
-            $newJob['location']['longitude'] = $job->features->location->longitude;
-            $newJob['location']['city'] = $job->features->location->city;
-            $newJob['location']['postcode'] = $job->features->location->postcode;
+                $newJob['organisation']['name'] = $job->organisation->name;
 
-            $newJob['hours']['max'] = $job->features->employmentConditions->hoursMax;
-            $newJob['hours']['min'] = $job->features->employmentConditions->hoursMin;
+                $newJob['location']['latitude'] = $job->features->location->latitude;
+                $newJob['location']['longitude'] = $job->features->location->longitude;
+                $newJob['location']['city'] = $job->features->location->city;
+                $newJob['location']['postcode'] = $job->features->location->postcode;
 
-            $newJob['salary']['max'] = $job->features->employmentConditions->salaryMax;
-            $newJob['salary']['max'] = $job->features->employmentConditions->salaryMin;
+                $newJob['hours']['max'] = $job->features->employmentConditions->hoursMax;
+                $newJob['hours']['min'] = $job->features->employmentConditions->hoursMin;
 
-            $newJob['contractType'] = $job->features->employmentConditions->contractType->label;
+                $newJob['salary']['max'] = $job->features->employmentConditions->salaryMax;
+                $newJob['salary']['max'] = $job->features->employmentConditions->salaryMin;
 
-            $newJob['branches'] = $this->scan($job->features->featuresDetail->jobBranches, 'label');
+                $newJob['contractType'] = $job->features->employmentConditions->contractType->label;
 
-            $newJob['categories'] = $this->scan($job->features->featuresDetail->jobCategories, 'label');
+                $newJob['branches'] = $this->scan($job->features->featuresDetail->jobBranches, 'label');
 
-            $newJob['educationLevels'] = $this->scan($job->features->featuresDetail->educationLevels, 'label');
+                $newJob['categories'] = $this->scan($job->features->featuresDetail->jobCategories, 'label');
 
-            array_push($newJobs, $newJob);
+                $newJob['educationLevels'] = $this->scan($job->features->featuresDetail->educationLevels, 'label');
+
+                array_push($newJobs, $newJob);
+            }
         }
 
         return $newJobs;
