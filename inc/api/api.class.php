@@ -3,6 +3,7 @@
 require_once 'resources/cso/cso.class.php';
 require_once 'resources/cso/enumeration.class.php';
 require_once 'resources/cso/filter.class.php';
+require_once 'resources/cso/parser.class.php';
 
 class Api
 {
