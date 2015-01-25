@@ -67,10 +67,16 @@ class Api
         $jobs = array();
 
         $CSO = $this->getResource('CSO');
-        $jobs += $CSO->getJobs($filter);
+        foreach($CSO->getJobs($filter) as $job)
+        {
+            array_push($jobs, $job);
+        }
 
         $OpenOnderwijs = $this->getResource('OpenOnderwijs');
-        $jobs += $OpenOnderwijs->getJobs($filter);
+        foreach($OpenOnderwijs->getJobs($filter) as $job)
+        {
+            array_push($jobs, $job);
+        }
 
         return $jobs;
     }
