@@ -30,7 +30,7 @@ class Api_Resources_OpenOnderwijs_Parser
 
             $newJob['location']['latitude'] = isset($job->_source->job_location_latitude) ? $job->_source->job_location_latitude : '';
             $newJob['location']['longitude'] = isset($job->_source->job_location_longitude) ? $job->_source->job_location_longitude : '';
-            $newJob['location']['city'] = $job->_source->job_location;
+            $newJob['location']['city'] = isset($job->_source->job_location) ? $job->_source->job_location : '';
             $newJob['location']['postcode'] = $job->_source->job_location_id;
 
             $newJob['hours']['type'] = $job->_source->working_hours;
@@ -66,5 +66,43 @@ class Api_Resources_OpenOnderwijs_Parser
      */
     public function parseJobs($jobs)
     {
+        $newJobs = array();
+
+        if(isset($jobs->hits))
+        {
+            foreach($jobs->hits->hits as $job)
+            {
+                $newJob = array();
+
+                $newJob['id'] = 'oo-'.$job->_id;
+
+                $newJob['jobCount'] = '1';
+
+                $newJob['organisation']['name'] = $job->_source->organization_name;
+
+                $newJob['location']['latitude'] = isset($job->_source->job_location_latitude) ? $job->_source->job_location_latitude : '';
+                $newJob['location']['longitude'] = isset($job->_source->job_location_longitude) ? $job->_source->job_location_longitude : '';
+                $newJob['location']['city'] =  isset($job->_source->job_location) ? $job->_source->job_location : '';
+                $newJob['location']['postcode'] = $job->_source->job_location_id;
+
+                $newJob['hours']['max'] = isset($job->_source->hours_per_week_min) ? $job->_source->hours_per_week_min : '';
+                $newJob['hours']['min'] = isset($job->_source->hours_per_week_max) ? $job->_source->hours_per_week_max : '';
+
+                $newJob['salary']['max'] = isset($job->_source->salery_min) ? $job->_source->salery_min : '';
+                $newJob['salary']['max'] = isset($job->_source->salary_max) ? $job->_source->salary_max : '';
+
+                $newJob['contractType'] = $job->_source->contract_type;
+
+                $newJob['branches'] = array($job->_source->sector);
+
+                $newJob['categories'] = array($job->_source->jobfeed_profession);
+
+                $newJob['educationLevels'] = explode('/', $job->_source->education_level);
+
+                array_push($newJobs, $newJob);
+            }
+        }
+
+        return $newJobs;
     }
 }
