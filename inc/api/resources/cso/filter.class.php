@@ -29,13 +29,16 @@ class Api_Resources_CSO_Filter
         );
 
         // loop through each filter and call dynamic function
-        foreach($filter as $key => $value)
+        if($filter !== false)
         {
-            $function = 'create'.ucfirst(strtolower($key)).'Filter';
-
-            if(method_exists($this, $function))
+            foreach($filter as $key => $value)
             {
-                $this->{$function}($_filter, $value);
+                $function = 'create'.ucfirst(strtolower($key)).'Filter';
+
+                if(method_exists($this, $function))
+                {
+                    $this->{$function}($_filter, $value);
+                }
             }
         }
 
