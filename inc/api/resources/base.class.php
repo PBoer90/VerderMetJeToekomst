@@ -10,17 +10,21 @@ abstract class Api_Resource_Base
      *
      * @param string $url
      * @param array [optional] $post
+     * @param bool [optional] $headers
      * @return array JSON OBJECT
      */
-    public function request($url, $post = array())
+    public function request($url, $post = array(), $headers = true)
     {
         // open connection
         $ch = curl_init();
 
-        // the right header
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-            'Content-Type: application/json'
-        ));
+        if($headers == true)
+        {
+            // the right header
+            curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+                'Content-Type: application/json'
+            ));
+        }
 
         // url
         curl_setopt($ch,CURLOPT_URL, $url);
