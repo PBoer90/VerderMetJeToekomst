@@ -25,7 +25,7 @@ class Api_Resources_OpenOnderwijs_Parser
 
             $newJob['employer']['description'] = isset($job->_source->employer_descr) ? $job->_source->employer_descr : '';
 
-            $newJob['organisation']['name'] = $job->_source->organization_name;
+            $newJob['organisation']['name'] = isset($job->_source->organization_name) ? $job->_source->organization_name : '';
             $newJob['organisation']['size'] = $job->_source->org_size;
 
             $newJob['location']['latitude'] = isset($job->_source->job_location_latitude) ? $job->_source->job_location_latitude : '';
@@ -78,7 +78,7 @@ class Api_Resources_OpenOnderwijs_Parser
 
                 $newJob['jobCount'] = '1';
 
-                $newJob['organisation']['name'] = $job->_source->organization_name;
+                $newJob['organisation']['name'] = isset($job->_source->organization_name) ? $job->_source->organization_name : '';
 
                 $newJob['location']['latitude'] = isset($job->_source->job_location_latitude) ? $job->_source->job_location_latitude : '';
                 $newJob['location']['longitude'] = isset($job->_source->job_location_longitude) ? $job->_source->job_location_longitude : '';
