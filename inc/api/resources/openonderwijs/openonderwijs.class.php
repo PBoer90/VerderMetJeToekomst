@@ -36,14 +36,18 @@ class Api_Resources_OpenOnderwijs extends Api_Resource_Base
     {
         $url = $this->getBaseUrl().'job_doc/jobfeed/job/'.$code;
 
-        $result = $this->request($url);
+        $result = $this->request($url, array(), false);
 
         return $this->parser->parseJob($result);
     }
 
     function getJobs($filter)
     {
-        // TODO: Implement getJobs() method.
+        $url = $this->getBaseUrl().'job_search?q=ict';
+
+        $result = $this->request($url, array(), false);
+
+        return $this->parser->parseJobs($result);
     }
 
     /**
