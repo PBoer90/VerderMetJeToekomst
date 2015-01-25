@@ -19,18 +19,22 @@ class Api_Resources_CSO_Filter
         $this->enumeration = $enumeration;
 
         $_filter = array(
-            '__type__' => 'RemoteJobFilter',
-            'featuresFilter' => array(
-                '__type__' => 'RemoteJobFeaturesFilter',
-                'detailFilter' => array(
-                    '__type__' => 'RemoteJobDetailFilter'
-                )
-            )
+            '__type__' => 'RemoteJobFilter'
         );
 
         // loop through each filter and call dynamic function
         if($filter !== false)
         {
+            $_filter = array(
+                '__type__' => 'RemoteJobFilter',
+                'featuresFilter' => array(
+                    '__type__' => 'RemoteJobFeaturesFilter',
+                    'detailFilter' => array(
+                        '__type__' => 'RemoteJobDetailFilter'
+                    )
+                )
+            );
+
             foreach($filter as $key => $value)
             {
                 $function = 'create'.ucfirst(strtolower($key)).'Filter';
