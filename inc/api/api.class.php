@@ -48,6 +48,11 @@ class Api
                 $CSO = $this->getResource('CSO');
                 return $CSO->getJob($id);
                 break;
+
+            case 'oo':
+                $OpenOnderwijs = $this->getResource('OpenOnderwijs');
+                return $OpenOnderwijs->getJob($id);
+                break;
         }
     }
 
