@@ -180,27 +180,6 @@ class Api_Resources_CSO extends Api_Resource_Base
         return $this->parser->parseJobs($this->request($url, $post));
     }
 
-    /**
-     * Extracts data for the enumeration type that is provided
-     *
-     * @param string $enumerationType EducationLevel|JobBranch|JobCategory|ContractType|Region
-     * @return array JSON Object
-     */
-    public function getJobCountForEnumeration($enumerationType)
-    {
-        $url = $this->getBaseUrl().'getJobCountForEnumeration.json';
-
-        $post = array(
-            'apiKey' => $this->getKey(),
-            'enumerationType' => $enumerationType,
-            'filter' => array(
-                '__type__' => 'RemoteJobFilter'
-            )
-        );
-
-        return $this->request($url, $post);
-    }
-
 
     /**
      * @return string
