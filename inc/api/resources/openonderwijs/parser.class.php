@@ -1,6 +1,6 @@
 <?php
 
-class Api_Resources_Openonderwijs_Parser
+class Api_Resources_OpenOnderwijs_Parser
 {
 
 }

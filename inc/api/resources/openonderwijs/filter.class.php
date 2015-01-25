@@ -1,6 +1,6 @@
 <?php
 
-class Api_Resources_Openonderwijs_Filter
+class Api_Resources_OpenOnderwijs_Filter
 {
 
 }
