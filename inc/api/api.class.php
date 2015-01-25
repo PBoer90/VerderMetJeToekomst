@@ -1,9 +1,14 @@
 <?php
 
+// Resources
 require_once 'resources/cso/cso.class.php';
 require_once 'resources/cso/enumeration.class.php';
 require_once 'resources/cso/filter.class.php';
 require_once 'resources/cso/parser.class.php';
+require_once 'resources/openonderwijs/openonderwijs.class.php';
+require_once 'resources/openonderwijs/enumeration.class.php';
+require_once 'resources/openonderwijs/filter.class.php';
+require_once 'resources/openonderwijs/parser.class.php';
 
 class Api
 {
@@ -20,6 +25,9 @@ class Api
         $CSO = new Api_Resources_CSO();
         $CSO->authenticate('timojong', 'FG4d%!k3hU');
         $this->addResource('CSO', $CSO);
+
+        $OpenOnderwijs = new Api_Resources_OpenOnderwijs();
+        $this->addResource('OpenOnderwijs', $OpenOnderwijs);
     }
 
     /**
