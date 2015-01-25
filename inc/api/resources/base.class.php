@@ -1,7 +1,10 @@
 <?php
 
-class Api_Resource_Base
+abstract class Api_Resource_Base
 {
+    abstract function getJob($code);
+    abstract function getJobs($filter);
+
     /**
      * Executes a curl request with the provided data
      *
