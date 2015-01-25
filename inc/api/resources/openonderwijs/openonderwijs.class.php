@@ -34,7 +34,11 @@ class Api_Resources_OpenOnderwijs extends Api_Resource_Base
 
     function getJob($code)
     {
-        // TODO: Implement getJob() method.
+        $url = $this->getBaseUrl().'job_doc/jobfeed/job/'.$code;
+
+        $result = $this->request($url);
+
+        return $this->parser->parseJob($result);
     }
 
     function getJobs($filter)
