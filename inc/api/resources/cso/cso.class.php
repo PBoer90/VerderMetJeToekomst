@@ -1,6 +1,6 @@
 <?php
 
-class Api_Resources_CSO
+class Api_Resources_CSO extends Api_Resource_Base
 {
     /**
      * @var Api_Resources_CSO_Enumeration $enumeration The Enumeration object
@@ -199,43 +199,6 @@ class Api_Resources_CSO
         );
 
         return $this->request($url, $post);
-    }
-
-    /**
-     * Executes a curl request with the provided data
-     *
-     * @param string $url
-     * @param array $post
-     * @return array JSON OBJECT
-     */
-    private function request($url, $post)
-    {
-        // open connection
-        $ch = curl_init();
-
-        // the right header
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-            'Content-Type: application/json'
-        ));
-
-        // url
-        curl_setopt($ch,CURLOPT_URL, $url);
-        // number of  POST vars
-        curl_setopt($ch,CURLOPT_POST, 1);
-        // POST data
-        curl_setopt($ch,CURLOPT_POSTFIELDS, json_encode($post));
-        // prevent raw output
-        curl_setopt($ch,CURLOPT_RETURNTRANSFER, true);
-
-        // get the result
-        $result = curl_exec($ch);
-
-        // close connection
-        curl_close($ch);
-
-        $result = json_decode($result);
-
-        return $result;
     }
 
 
