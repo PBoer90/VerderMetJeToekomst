@@ -93,7 +93,10 @@ class Api
         $CSO = $this->getResource('CSO');
         $educations = array_merge($educations, $CSO->enumeration->getEducations());
 
-        return $educations;
+        $OpenOnderwijs = $this->getResource('OpenOnderwijs');
+        $educations = array_merge($educations, $OpenOnderwijs->enumeration->getEducations());
+
+        return array_unique($educations);
     }
 
     public function getRegions()
