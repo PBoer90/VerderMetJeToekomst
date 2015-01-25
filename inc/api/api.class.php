@@ -1,6 +1,7 @@
 <?php
 
 // Resources
+require_once 'resources/base.class.php';
 require_once 'resources/cso/cso.class.php';
 require_once 'resources/cso/enumeration.class.php';
 require_once 'resources/cso/filter.class.php';
