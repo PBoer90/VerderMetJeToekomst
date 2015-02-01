@@ -39,6 +39,6 @@ class Api_Resources_OpenOnderwijs_Enumeration
      */
     public function getBranches()
     {
-        return array_keys($this->branches);
+        return $this->branches;
     }
 }
