@@ -83,6 +83,40 @@ class Api_Resources_CSO_Filter
     }
 
     /**
+     * Creates branch filter
+     *
+     * @param array $_filter The filter array
+     * @param array|string $branch The branch(es)
+     */
+    public function createBranchFilter(&$_filter, $branch)
+    {
+        if($branch !== null)
+        {
+            if(is_array($branch))
+            {
+                foreach($branch as $value)
+                {
+                    $this->createBranchFilter($_filter, $value);
+                }
+            }
+
+            if(is_string($branch))
+            {
+                $branchCode = $this->enumeration->getBranchCode($branch);
+
+                if($branchCode != false)
+                {
+                    $_filter['featuresFilter']['detailFilter']['jobBranches'][] = array(
+                        '__type__' => 'JobBranch',
+                        'code' => $branchCode
+                    );
+                }
+            }
+        }
+    }
+
+
+    /**
      * Creates regions filter part
      *
      * @param array $_filter The filter array
