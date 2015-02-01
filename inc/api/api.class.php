@@ -93,6 +93,9 @@ class Api
         $CSO = $this->getResource('CSO');
         $branches = array_merge($branches, $CSO->enumeration->getBranches());
 
+        $OpenOnderwijs = $this->getResource('OpenOnderwijs');
+        $branches = array_merge($branches, $OpenOnderwijs->enumeration->getBranches());
+
         return $this->output($branches);
     }
 
