@@ -58,4 +58,26 @@ class Api_Resources_OpenOnderwijs_Filter
             }
         }
     }
+
+    /**
+     * Creates branch filter part
+     *
+     * @param array $_filter The filter array
+     * @param array|string $branch The branch(es)
+     */
+    public function createBranchFilter(&$_filter, $branch)
+    {
+        if($branch !== null)
+        {
+            if(is_array($branch))
+            {
+                array_push($_filter, 'sector='.implode(',', $branch));
+            }
+
+            if(is_string($branch))
+            {
+                array_push($_filter, 'sector='.$branch);
+            }
+        }
+    }
 }
