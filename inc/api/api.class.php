@@ -35,6 +35,7 @@ class Api
      * Gets all information from one job
      *
      * @param string $id The job id
+     * @return array Job data
      */
     public function getJob($id)
     {

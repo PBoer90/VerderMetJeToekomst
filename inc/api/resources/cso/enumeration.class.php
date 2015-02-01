@@ -108,8 +108,6 @@ class Api_Resources_CSO_Enumeration
      * Returns all the regions we got
      *
      * @return array Regions
-     *
-     * @TODO - Nicer code ?
      */
     public function getRegions()
     {
