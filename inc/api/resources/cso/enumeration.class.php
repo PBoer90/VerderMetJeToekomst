@@ -115,11 +115,6 @@ class Api_Resources_CSO_Enumeration
     {
         $regions = array_keys($this->regions);
 
-        foreach($regions as &$value)
-        {
-            $value = ucwords(implode('-', array_map('ucfirst', explode('-', $value))));
-        }
-
         return $regions;
     }
 
