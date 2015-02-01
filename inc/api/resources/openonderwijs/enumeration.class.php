@@ -4,15 +4,17 @@ class Api_Resources_OpenOnderwijs_Enumeration
 {
     /**
      * @var array $educations Array with all the educations
+     * TODO - GET DATA DYNAMICALLY
      */
     private $educations = array(
-        'wo_post',
-        'wo',
-        'hbo',
-        'mbo',
-        'vmbo'
+        'HBO',
+        'MBO',
     );
 
+    /**
+     * @var array $branches Array with all the branches
+     * TODO - GET DATA DYNAMICALLY
+     */
     private $branches = array(
         'Onderwijs / Onderzoek',
         'Arbeidsbemiddeling',

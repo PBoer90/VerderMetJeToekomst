@@ -2,29 +2,34 @@
 
 class Api_Resources_CSO_Enumeration
 {
-    // TODO - add other education
     /**
      * @var array $educations Array with all the educations
+     * TODO - GET DATA DYNAMICALLY
      */
     private $educations = array(
-        'hbo' => 'CWD.08',
-        'mbo' => 'CWD.12'
+        'HBO' => 'CWD.08',
+        'MBO' => 'CWD.12'
     );
 
     /**
      * @var array $regions Array with all the regions
+     * TODO - GET DATA DYNAMICALLY
      */
     private $regions = array(
-        'gelderland' => 'BRG.0210',
-        'flevoland' => 'BRG.0212',
-        'utrecht' => 'BRG.0214',
-        'noord-holland' => 'BRG.0216',
-        'zuid-holland' => 'BRG.0218',
-        'zeeland' => 'BRG.0220',
-        'noord-brabant' => 'BRG.0222',
-        'caribisch nederland' => 'BRG.0226'
+        'Gelderland' => 'BRG.0210',
+        'Flevoland' => 'BRG.0212',
+        'Utrecht' => 'BRG.0214',
+        'Noord-Holland' => 'BRG.0216',
+        'Zuid-Holland' => 'BRG.0218',
+        'Zeeland' => 'BRG.0220',
+        'Noord-Brabant' => 'BRG.0222',
+        'Caribisch Nederland' => 'BRG.0226'
     );
 
+    /**
+     * @var array $branches Array with all the branches
+     * TODO - GET DATA DYNAMICALLY
+     */
     private $branches = array(
         'Administratief/Secretarieel' => 'CVG.02',
         'Fiscaal' => 'CVG.0602',
@@ -61,9 +66,9 @@ class Api_Resources_CSO_Enumeration
      */
     public function getEducationCode($name)
     {
-        if(isset($this->educations[strtolower($name)]))
+        if(isset($this->educations[$name]))
         {
-            return $this->educations[strtolower($name)];
+            return $this->educations[$name];
         }
         else
         {
@@ -89,9 +94,9 @@ class Api_Resources_CSO_Enumeration
      */
     public function getRegionCode($name)
     {
-        if(isset($this->regions[strtolower($name)]))
+        if(isset($this->regions[$name]))
         {
-            return $this->regions[strtolower($name)];
+            return $this->regions[$name];
         }
         else
         {
@@ -126,9 +131,9 @@ class Api_Resources_CSO_Enumeration
      */
     public function getBranchCode($name)
     {
-        if(isset($this->branches[strtolower($name)]))
+        if(isset($this->branches[$name]))
         {
-            return $this->branches[strtolower($name)];
+            return $this->branches[$name];
         }
         else
         {
