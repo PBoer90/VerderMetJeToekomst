@@ -13,6 +13,15 @@ class Api_Resources_OpenOnderwijs_Enumeration
         'vmbo'
     );
 
+    private $branches = array(
+        'Onderwijs / Onderzoek',
+        'Arbeidsbemiddeling',
+        'Gezondheidszorg / Welzijn',
+        'Handel',
+        'Zakelijke dienstverlening',
+        'Overig / Onbekend'
+    );
+
     /**
      * Returns all the educations we got
      *
@@ -21,5 +30,15 @@ class Api_Resources_OpenOnderwijs_Enumeration
     public function getEducations()
     {
         return $this->educations;
+    }
+
+    /**
+     * Returns all the branches we got
+     *
+     * @return array Branches
+     */
+    public function getBranches()
+    {
+        return array_keys($this->branches);
     }
 }
