@@ -1,6 +1,11 @@
+/**
+ * Setup
+ */
+var slideHistory = [];
 var currentSlide = 'choice-welcome';
 var Carousel = $('.carousel');
 var carouselNavigation = $('#slide-navigation');
+var icon = carouselNavigation.find('i');
 var slides = setSlides();
 
 /**
@@ -16,13 +21,20 @@ Carousel.carousel({
  */
 $('#mainCarousel').on('slide.bs.carousel', function (slideEvent) {
     currentSlide = $(slideEvent.relatedTarget).attr('id');
+    slideHistory.push(currentSlide);
+    console.log(slideHistory);
     if(currentSlide == 'choice-welcome'){
         carouselNavigation.addClass('disappear');
+        icon.addClass('half-rotate');
     }else{
         if(carouselNavigation.hasClass('disappear'))
             carouselNavigation.removeClass('disappear');
 
+        if(icon.hasClass('half-rotate'))
+            icon.removeClass('half-rotate');
+
         carouselNavigation.addClass('appear');
+
     }
 });
 
@@ -35,6 +47,7 @@ function setSlides(){
     $('.carousel-inner .item').each(function(slideNumber, element){
         obj[$(element).attr('id')] = slideNumber;
     });
+    slideHistory.push(currentSlide);
     return obj;
 }
 
@@ -51,11 +64,9 @@ function goToSlide(x){
 }
 
 /**
- * Go back a slide
- * @TODO go to prev slide instead of first
- *
+ * Go back a slide from the current slide
  */
 carouselNavigation.click(function(){
-    goToSlide('choice-welcome');
+    goToSlide(slideHistory[slideHistory.length -2]);
 });
 

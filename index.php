@@ -1,3 +1,4 @@
+<?php header("Access-Control-Allow-Origin: *"); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,11 +39,11 @@
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <button class="btn" id="slide-navigation">
-                <i class="mdi-navigation-arrow-back icon-3x" id="slide-navigation-btn"></i>
+                <i class="mdi-navigation-arrow-back icon-3x half-rotate" id="slide-navigation-btn"></i>
             </button>
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-mobile">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -51,7 +52,7 @@
                 <a class="navbar-brand"  data-target="#mainCarousel" data-slide-to="0" >Verder met je Toekomst</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse" id="navbar-mobile">
                 <ul class="nav navbar-nav">
                     <li>
                         <a href="#" data-toggle="modal" data-target="#company-dialog">Bedrijven</a>
@@ -80,17 +81,17 @@
             <div class="item active" id="choice-welcome">
                 <div class="carousel-content">
                     <div class="container-fluid">
-                        <div class="row well">
+                        <div class="row well well-opacity">
                             <div class ="col-lg-12 ">
-                                <h1>Zoek jouw nieuwe stage of stagiaires!</h1>
-                                <p>Begin hier met kiezen</p>
+                                <h1 class="welcome">Welkom, waar ben je naar op zoek?</h1>
+                                <p>Maak hier je keuze</p>
                             </div>
                             <div class="col-sm-5">
-                                <button class="btn btn-lg btn-primary btn-slide" data-target="#mainCarousel" data-slide-to="1">Bedrijf</button>
+                                <button class="btn btn-lg btn-primary btn-slide" data-target="#mainCarousel" data-slide-to="1" id="btn-work">Werk</button>
                             </div>
                                 <div class="col-sm-2">&nbsp;</div>
                             <div class="col-sm-5">
-                                <button class="btn btn-lg btn-primary btn-slide" data-target="#mainCarousel" data-slide-to="2">Student</button>
+                                <button class="btn btn-lg btn-primary btn-slide" data-target="#mainCarousel" data-slide-to="2" id="btn-internship">Stage</button>
                             </div>
                         </div>
                     </div>
@@ -137,9 +138,14 @@
                         Mentitum id velit, dolor aut litteris, ea varias illustriora, ita commodo ita
                         ingeniis, iis nulla appellat incurreret, aut irure amet summis pariatur ita ubi
                         quis dolore veniam proident, consequat sed ingeniis.</p>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-primary" data-dismiss="modal">Sluit</button>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a class="btn btn-primary" data-dismiss="modal">Schrijf bedrijf in</a>
+                        </div>
+                        <div class="col-md-6">
+                            <button class="btn btn-primary pull-right" data-dismiss="modal">Sluit</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -178,6 +184,7 @@
     <script src="material/js/material.min.js"></script>
     <script src="js/carousel.js"></script>
     <script src="js/misc.js"></script>
+    <script src="js/adapter.js"></script>
     <script>
         //Init Material Scripts
         $(document).ready(function() {
