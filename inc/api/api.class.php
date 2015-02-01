@@ -46,12 +46,12 @@ class Api
         {
             case 'cso':
                 $CSO = $this->getResource('CSO');
-                return $CSO->getJob($id);
+                return $this->output($CSO->getJob($id));
                 break;
 
             case 'oo':
                 $OpenOnderwijs = $this->getResource('OpenOnderwijs');
-                return $OpenOnderwijs->getJob($id);
+                return $this->output($OpenOnderwijs->getJob($id));
                 break;
         }
     }
@@ -78,7 +78,22 @@ class Api
             array_push($jobs, $job);
         }
 
-        return $jobs;
+        return $this->output($jobs);
+    }
+
+    /**
+     * Returns all possible branches
+     *
+     * @return array Branches
+     */
+    public function getBranches()
+    {
+        $branches = array();
+
+        $CSO = $this->getResource('CSO');
+        $branches = array_merge($branches, $CSO->enumeration->getBranches());
+
+        return $this->output($branches);
     }
 
     /**
@@ -96,7 +111,9 @@ class Api
         $OpenOnderwijs = $this->getResource('OpenOnderwijs');
         $educations = array_merge($educations, $OpenOnderwijs->enumeration->getEducations());
 
-        return array_unique($educations);
+        $educations = array_unique($educations);
+
+        return $this->output($educations);
     }
 
     public function getRegions()
@@ -106,7 +123,7 @@ class Api
         $CSO = $this->getResource('CSO');
         $regions = array_merge($regions, $CSO->enumeration->getRegions());
 
-        return $regions;
+        return $this->output($regions);
     }
 
     /**
@@ -132,5 +149,16 @@ class Api
         {
             return $this->resources[$name];
         }
+    }
+
+    /**
+     * Json encodes the data for output
+     *
+     * @param array $data
+     * @return string JSON
+     */
+    private function output($data)
+    {
+        return json_encode($data);
     }
 }
