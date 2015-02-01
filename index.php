@@ -91,7 +91,7 @@
                             </div>
                                 <div class="col-sm-2">&nbsp;</div>
                             <div class="col-sm-5">
-                                <button class="btn btn-lg btn-primary btn-slide" data-target="#mainCarousel" data-slide-to="2" id="btn-internship">Stage</button>
+                                <button class="btn btn-lg btn-primary btn-slide"data-target="#mainCarousel" data-slide-to="2" id="btn-internship">Stage</button>
                             </div>
                         </div>
                     </div>
@@ -109,6 +109,9 @@
                 <div class="fill" style="background-image:url('img/bg3.jpg');"></div>
                 <div class="carousel-content">
                     <div class="container-fluid">
+                        <div class="row well well-opacity">
+                            <i class="mdi-notification-sync icon-10x rotating"></i>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -117,6 +120,9 @@
                 <div class="fill" style="background-image:url('img/bg2.jpg');"></div>
                 <div class="carousel-content">
                     <div class="container-fluid">
+                        <div class="row well well-opacity">
+                            <i class="mdi-notification-sync icon-10x rotating"></i>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -139,11 +145,14 @@
                         ingeniis, iis nulla appellat incurreret, aut irure amet summis pariatur ita ubi
                         quis dolore veniam proident, consequat sed ingeniis.</p>
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-sm-4">
                             <a class="btn btn-primary" data-dismiss="modal">Schrijf bedrijf in</a>
                         </div>
-                        <div class="col-md-6">
-                            <button class="btn btn-primary pull-right" data-dismiss="modal">Sluit</button>
+                        <div class="col-sm-4">
+                            &nbsp;
+                        </div>
+                        <div class="col-sm-4">
+                            <a class="btn btn-primary" data-dismiss="modal">Sluit</a>
                         </div>
                     </div>
                 </div>
@@ -185,6 +194,7 @@
     <script src="js/carousel.js"></script>
     <script src="js/misc.js"></script>
     <script src="js/adapter.js"></script>
+    <script src="js/slides.js"></script>
     <script>
         //Init Material Scripts
         $(document).ready(function() {

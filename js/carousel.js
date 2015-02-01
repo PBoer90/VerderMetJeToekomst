@@ -22,11 +22,12 @@ Carousel.carousel({
 $('#mainCarousel').on('slide.bs.carousel', function (slideEvent) {
     currentSlide = $(slideEvent.relatedTarget).attr('id');
     slideHistory.push(currentSlide);
-    console.log(slideHistory);
     if(currentSlide == 'choice-welcome'){
         carouselNavigation.addClass('disappear');
         icon.addClass('half-rotate');
     }else{
+
+        Slides.getContent(currentSlide);
         if(carouselNavigation.hasClass('disappear'))
             carouselNavigation.removeClass('disappear');
 
