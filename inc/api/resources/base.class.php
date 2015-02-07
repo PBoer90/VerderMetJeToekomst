@@ -2,8 +2,8 @@
 
 abstract class Api_Resource_Base
 {
-    abstract function getJob($code);
-    abstract function getJobs($filter);
+    abstract public function getJob($code);
+    abstract public function getJobs($filter);
 
     /**
      * Executes a curl request with the provided data
@@ -58,6 +58,7 @@ abstract class Api_Resource_Base
      */
     public function getEducations()
     {
+        $this->generateEnumeration('educations');
         return $this->enumeration->getEducations();
     }
 
@@ -68,6 +69,12 @@ abstract class Api_Resource_Base
      */
     public function getBranches()
     {
+        $this->generateEnumeration('branches');
         return $this->enumeration->getBranches();
     }
+
+    /**
+     * Generates the provided enumeration(s)
+     */
+    abstract protected function generateEnumeration();
 }
