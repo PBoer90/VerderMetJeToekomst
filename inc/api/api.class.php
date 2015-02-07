@@ -97,6 +97,10 @@ class Api
         $OpenOnderwijs = $this->getResource('OpenOnderwijs');
         $branches = array_merge($branches, $OpenOnderwijs->getBranches());
 
+        // prevent duplicated
+        $branches = array_unique($branches);
+        $branches = array_values($branches);
+
         return $this->output($branches);
     }
 
@@ -115,7 +119,9 @@ class Api
         $OpenOnderwijs = $this->getResource('OpenOnderwijs');
         $educations = array_merge($educations, $OpenOnderwijs->getEducations());
 
+        // prevent duplicated
         $educations = array_unique($educations);
+        $educations = array_values($educations);
 
         return $this->output($educations);
     }

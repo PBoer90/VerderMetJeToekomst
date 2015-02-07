@@ -126,8 +126,6 @@ class Api_Resources_CSO_Parser
             $_enumeration = array_merge($_enumeration, $this->scan(array($value->enumeration), 'label', 'code'));
         }
 
-        $_enumeration = array_flip($_enumeration);
-
         return $_enumeration;
     }
 
@@ -160,7 +158,7 @@ class Api_Resources_CSO_Parser
                     }
                     else
                     {
-                        $return[$value->{$key}] = $value->{$field};
+                        $return[$value->{$field}] = $value->{$key};
                     }
                 }
             }
