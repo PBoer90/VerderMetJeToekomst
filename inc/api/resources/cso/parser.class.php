@@ -111,13 +111,35 @@ class Api_Resources_CSO_Parser
     }
 
     /**
+     * Parses the given enumeration
+     *
+     * @param array $enumeration The enumeration array
+     * @return array The parsed enumeration
+     */
+    public function parseEnumeration($enumeration)
+    {
+        $_enumeration = array();
+        $enumeration = $enumeration->result;
+
+        foreach($enumeration as $value)
+        {
+            $_enumeration = array_merge($_enumeration, $this->scan(array($value->enumeration), 'label', 'code'));
+        }
+
+        $_enumeration = array_flip($_enumeration);
+
+        return $_enumeration;
+    }
+
+    /**
      * Scans and extracts the $field value from the JSON Object, also checks for children
      *
      * @param array $json The JSON object
      * @param string $field The value that we need to extract
+     * @param string|bool $key [optional] The key for the returning array
      * @return array The $field values
      */
-    private function scan($json, $field)
+    private function scan($json, $field, $key=false)
     {
         $return = array();
 
@@ -127,12 +149,19 @@ class Api_Resources_CSO_Parser
             {
                 if(count($value->children) > 0)
                 {
-                    $return = array_merge($return, $this->scan($value->children, $field));
+                    $return = array_merge($return, $this->scan($value->children, $field, $key));
                 }
 
                 if(isset($value->{$field}))
                 {
-                    array_push($return, $value->{$field});
+                    if($key === false)
+                    {
+                        array_push($return, $value->{$field});
+                    }
+                    else
+                    {
+                        $return[$value->{$key}] = $value->{$field};
+                    }
                 }
             }
         }

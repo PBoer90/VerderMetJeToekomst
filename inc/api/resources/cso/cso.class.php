@@ -158,6 +158,8 @@ class Api_Resources_CSO extends Api_Resource_Base
      */
     public function getJobs($filter)
     {
+        $this->generateEnumeration('educations', 'branches');
+
         $url = $this->getBaseUrl().'getJobs.json';
 
         $remoteJobFilter = $this->filter->create($filter, $this->enumeration);
@@ -178,6 +180,47 @@ class Api_Resources_CSO extends Api_Resource_Base
         );
 
         return $this->parser->parseJobs($this->request($url, $post));
+    }
+
+    protected function generateEnumeration()
+    {
+        $indicators = func_get_args();
+
+        foreach($indicators as $indicator)
+        {
+            switch($indicator)
+            {
+                case 'educations':
+                    $this->enumeration->setEducations($this->getJobCountForEnumeration('EducationLevel'));
+                    break;
+
+                case 'branches':
+                    $this->enumeration->setBranches($this->getJobCountForEnumeration('JobBranch'));
+                    break;
+            }
+        }
+    }
+
+    /**
+     * Extracts data for the enumeration type that is provided
+     *
+     * @param string $enumerationType EducationLevel|JobBranch|JobCategory|ContractType|Region
+     * @return array JSON Object
+     */
+    private function getJobCountForEnumeration($enumerationType)
+    {
+        $url = $this->getBaseUrl().'getJobCountForEnumeration.json';
+
+        $post = array(
+            'apiKey' => $this->getKey(),
+            'enumerationType' => $enumerationType,
+            'filter' => array(
+                '__type__' => 'RemoteJobFilter'
+            )
+
+        );
+
+        return $this->parser->parseEnumeration($this->request($url, $post));
     }
 
     /**
