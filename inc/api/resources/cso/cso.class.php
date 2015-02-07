@@ -5,17 +5,17 @@ class Api_Resources_CSO extends Api_Resource_Base
     /**
      * @var Api_Resources_CSO_Enumeration $enumeration The Enumeration object
      */
-    public $enumeration;
+    protected $enumeration;
 
     /**
      * @var Api_Resources_CSO_Filter $filter The filter object
      */
-    private $filter;
+    protected $filter;
 
     /**
      * @var Api_Resources_CSO_Parser $parser The parser object
      */
-    private $parser;
+    protected $parser;
 
     /**
      * @var string $username The Api user name
@@ -179,7 +179,6 @@ class Api_Resources_CSO extends Api_Resource_Base
 
         return $this->parser->parseJobs($this->request($url, $post));
     }
-
 
     /**
      * @return string

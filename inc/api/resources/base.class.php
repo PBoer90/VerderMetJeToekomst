@@ -50,4 +50,14 @@ abstract class Api_Resource_Base
 
         return $result;
     }
+
+    public function getEducations()
+    {
+        return $this->enumeration->getEducations();
+    }
+
+    public function getBranches()
+    {
+        return $this->enumeration->getBranches();
+    }
 }

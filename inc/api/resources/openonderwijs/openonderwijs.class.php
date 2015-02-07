@@ -5,17 +5,17 @@ class Api_Resources_OpenOnderwijs extends Api_Resource_Base
     /**
      * @var Api_Resources_OpenOnderwijs_Enumeration $enumeration The Enumeration object
      */
-    public $enumeration;
+    protected $enumeration;
 
     /**
      * @var Api_Resources_OpenOnderwijs_Filter $filter The filter object
      */
-    private $filter;
+    protected $filter;
 
     /**
      * @var Api_Resources_OpenOnderwijs_Parser $parser The parser object
      */
-    private $parser;
+    protected $parser;
 
     /**
      * @var string $baseUrl The base url for the Api

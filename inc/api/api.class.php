@@ -85,17 +85,17 @@ class Api
     /**
      * Returns all possible branches
      *
-     * @return array Branches
+     * @return string Branches
      */
     public function getBranches()
     {
         $branches = array();
 
         $CSO = $this->getResource('CSO');
-        $branches = array_merge($branches, $CSO->enumeration->getBranches());
+        $branches = array_merge($branches, $CSO->getBranches());
 
         $OpenOnderwijs = $this->getResource('OpenOnderwijs');
-        $branches = array_merge($branches, $OpenOnderwijs->enumeration->getBranches());
+        $branches = array_merge($branches, $OpenOnderwijs->getBranches());
 
         return $this->output($branches);
     }
@@ -103,31 +103,21 @@ class Api
     /**
      * Gets all the educations we got
      *
-     * @return array Educations
+     * @return string Educations
      */
     public function getEducations()
     {
         $educations = array();
 
         $CSO = $this->getResource('CSO');
-        $educations = array_merge($educations, $CSO->enumeration->getEducations());
+        $educations = array_merge($educations, $CSO->getEducations());
 
         $OpenOnderwijs = $this->getResource('OpenOnderwijs');
-        $educations = array_merge($educations, $OpenOnderwijs->enumeration->getEducations());
+        $educations = array_merge($educations, $OpenOnderwijs->getEducations());
 
         $educations = array_unique($educations);
 
         return $this->output($educations);
-    }
-
-    public function getRegions()
-    {
-        $regions = array();
-
-        $CSO = $this->getResource('CSO');
-        $regions = array_merge($regions, $CSO->enumeration->getRegions());
-
-        return $this->output($regions);
     }
 
     /**
