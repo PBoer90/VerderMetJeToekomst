@@ -59,6 +59,16 @@ class Api_Resources_CSO_Enumeration
     );
 
     /**
+     * Sets the educations
+     *
+     * @param array $educations The educations
+     */
+    public function setEducations($educations)
+    {
+        $this->educations = $educations;
+    }
+
+    /**
      * Returns the education code for the given education name
      *
      * @param string $name The education name
@@ -84,6 +94,44 @@ class Api_Resources_CSO_Enumeration
     public function getEducations()
     {
         return array_keys($this->educations);
+    }
+
+    /**
+     * Sets the branches
+     *
+     * @param array $branches The branches
+     */
+    public function setBranches($branches)
+    {
+        $this->branches = $branches;
+    }
+
+    /**
+     * Returns the branch code for the given branch name
+     *
+     * @param string $name The branch name
+     * @return mixed The branch code, if we can find the matching branch else false
+     */
+    public function getBranchCode($name)
+    {
+        if(isset($this->branches[$name]))
+        {
+            return $this->branches[$name];
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    /**
+     * Returns all the branches we got
+     *
+     * @return array Branches
+     */
+    public function getBranches()
+    {
+        return array_keys($this->branches);
     }
 
     /**
@@ -114,33 +162,5 @@ class Api_Resources_CSO_Enumeration
         $regions = array_keys($this->regions);
 
         return $regions;
-    }
-
-    /**
-     * Returns the branch code for the given branch name
-     *
-     * @param string $name The branch name
-     * @return mixed The branch code, if we can find the matching branch else false
-     */
-    public function getBranchCode($name)
-    {
-        if(isset($this->branches[$name]))
-        {
-            return $this->branches[$name];
-        }
-        else
-        {
-            return false;
-        }
-    }
-
-    /**
-     * Returns all the branches we got
-     *
-     * @return array Branches
-     */
-    public function getBranches()
-    {
-        return array_keys($this->branches);
     }
 }

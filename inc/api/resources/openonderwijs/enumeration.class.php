@@ -25,6 +25,16 @@ class Api_Resources_OpenOnderwijs_Enumeration
     );
 
     /**
+     * Sets the educations
+     *
+     * @param array $educations The educations
+     */
+    public function setEducations($educations)
+    {
+        $this->educations = $educations;
+    }
+
+    /**
      * Returns all the educations we got
      *
      * @return array Educations
@@ -32,6 +42,16 @@ class Api_Resources_OpenOnderwijs_Enumeration
     public function getEducations()
     {
         return $this->educations;
+    }
+
+    /**
+     * Sets the branches
+     *
+     * @param array $branches The branches
+     */
+    public function setBranches($branches)
+    {
+        $this->branches = $branches;
     }
 
     /**
