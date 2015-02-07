@@ -51,11 +51,21 @@ abstract class Api_Resource_Base
         return $result;
     }
 
+    /**
+     * Returns all the educations we got
+     *
+     * @return array Educations
+     */
     public function getEducations()
     {
         return $this->enumeration->getEducations();
     }
 
+    /**
+     * Returns all the branches we got
+     *
+     * @return array Branches
+     */
     public function getBranches()
     {
         return $this->enumeration->getBranches();
