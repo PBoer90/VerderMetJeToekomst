@@ -23,6 +23,11 @@ class Api_Resources_OpenOnderwijs extends Api_Resource_Base
     private $baseUrl = 'http://api.openonderwijsdata.nl/api/v2/';
 
     /**
+     * @var string $cacheJobs The jobs
+     */
+    private $cacheJobs = false;
+
+    /**
      * Initializes the enumeration and filter object
      */
     public function __construct()
@@ -58,7 +63,6 @@ class Api_Resources_OpenOnderwijs extends Api_Resource_Base
         $this->generateEnumeration('educations', 'branches');
 
         $url = $this->getBaseUrl().'job_search'.$this->filter->create($filter, $this->enumeration);
-
         $result = $this->request($url, array(), false);
 
         return $this->parser->parseJobs($result);
@@ -66,10 +70,31 @@ class Api_Resources_OpenOnderwijs extends Api_Resource_Base
 
     /**
      * Generates the provided enumeration(s)
+     *
+     * @param array|bool $filter $filter The filter
      */
-    protected function generateEnumeration()
+    protected function generateEnumeration($filter = false)
     {
-        // generate enumeration
+        $_educations = array();
+        $_branches = array();
+
+        // we can only filter the enumeration from the jobs
+        $result = $this->request($this->getBaseUrl().'job_search', array(), false);
+
+        if(isset($result->hits))
+        {
+            foreach($result->hits->hits as $job)
+            {
+                $_educations = array_merge($_educations, explode('/', $job->_source->education_level));
+                $_branches = array_merge($_branches, array($job->_source->sector));
+            }
+        }
+
+        $_educations = array_unique($_educations);
+        $_branches = array_unique($_branches);
+
+        $this->enumeration->setEducations($_educations);
+        $this->enumeration->setBranches($_branches);
     }
 
     /**

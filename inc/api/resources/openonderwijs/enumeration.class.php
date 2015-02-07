@@ -4,25 +4,13 @@ class Api_Resources_OpenOnderwijs_Enumeration
 {
     /**
      * @var array $educations Array with all the educations
-     * TODO - GET DATA DYNAMICALLY
      */
-    private $educations = array(
-        'HBO',
-        'MBO',
-    );
+    private $educations = array();
 
     /**
      * @var array $branches Array with all the branches
-     * TODO - GET DATA DYNAMICALLY
      */
-    private $branches = array(
-        'Onderwijs / Onderzoek',
-        'Arbeidsbemiddeling',
-        'Gezondheidszorg / Welzijn',
-        'Handel',
-        'Zakelijke dienstverlening',
-        'Overig / Onbekend'
-    );
+    private $branches = array();
 
     /**
      * Sets the educations
