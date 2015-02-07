@@ -32,6 +32,12 @@ class Api_Resources_OpenOnderwijs extends Api_Resource_Base
         $this->parser = new Api_Resources_OpenOnderwijs_Parser();
     }
 
+    /**
+     * Extracts data for the provided job code
+     *
+     * @param string $code The job code
+     * @return array JSON Object
+     */
     function getJob($code)
     {
         $url = $this->getBaseUrl().'job_doc/jobfeed/job/'.$code;
@@ -41,6 +47,12 @@ class Api_Resources_OpenOnderwijs extends Api_Resource_Base
         return $this->parser->parseJob($result);
     }
 
+    /**
+     * List of all the jobs
+     *
+     * @param mixed $filter An array with filters
+     * @return array JSON object
+     */
     function getJobs($filter)
     {
         $this->generateEnumeration('educations', 'branches');
@@ -52,6 +64,9 @@ class Api_Resources_OpenOnderwijs extends Api_Resource_Base
         return $this->parser->parseJobs($result);
     }
 
+    /**
+     * Generates the provided enumeration(s)
+     */
     protected function generateEnumeration()
     {
         // generate enumeration

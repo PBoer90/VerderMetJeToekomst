@@ -182,6 +182,9 @@ class Api_Resources_CSO extends Api_Resource_Base
         return $this->parser->parseJobs($this->request($url, $post));
     }
 
+    /**
+     * Generates the provided enumeration(s)
+     */
     protected function generateEnumeration()
     {
         $indicators = func_get_args();
