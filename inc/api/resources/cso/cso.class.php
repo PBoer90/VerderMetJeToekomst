@@ -194,11 +194,17 @@ class Api_Resources_CSO extends Api_Resource_Base
             switch($indicator)
             {
                 case 'educations':
-                    $this->enumeration->setEducations($this->getJobCountForEnumeration('EducationLevel'));
+                    if($this->enumeration->hasEducations() === false)
+                    {
+                        $this->enumeration->setEducations($this->getJobCountForEnumeration('EducationLevel'));
+                    }
                     break;
 
                 case 'branches':
-                    $this->enumeration->setBranches($this->getJobCountForEnumeration('JobBranch'));
+                    if($this->enumeration->hasBranches() === false)
+                    {
+                        $this->enumeration->setBranches($this->getJobCountForEnumeration('JobBranch'));
+                    }
                     break;
             }
         }

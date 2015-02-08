@@ -1,6 +1,6 @@
 <?php
 
-class Api_Resources_CSO_Enumeration
+class Api_Resources_CSO_Enumeration extends Api_Resource_Enumeration_Base
 {
     /**
      * @var array $educations Array with all the educations
@@ -35,6 +35,16 @@ class Api_Resources_CSO_Enumeration
     public function setEducations($educations)
     {
         $this->educations = $educations;
+    }
+
+    /**
+     * Returns true if we have educations
+     *
+     * @return bool True when we got educations else false
+     */
+    public function hasEducations()
+    {
+        return count($this->educations) > 0 ? true : false;
     }
 
     /**
@@ -73,6 +83,16 @@ class Api_Resources_CSO_Enumeration
     public function setBranches($branches)
     {
         $this->branches = $branches;
+    }
+
+    /**
+     * Returns true if we have branches
+     *
+     * @return bool True when we got branches else false
+     */
+    public function hasBranches()
+    {
+        return count($this->branches) > 0 ? true : false;
     }
 
     /**

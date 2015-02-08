@@ -75,26 +75,30 @@ class Api_Resources_OpenOnderwijs extends Api_Resource_Base
      */
     protected function generateEnumeration($filter = false)
     {
-        $_educations = array();
-        $_branches = array();
-
-        // we can only filter the enumeration from the jobs
-        $result = $this->request($this->getBaseUrl().'job_search', array(), false);
-
-        if(isset($result->hits))
+        if($this->enumeration->hasEducations() === false &&
+            $this->enumeration->hasBranches() === false)
         {
-            foreach($result->hits->hits as $job)
+            $_educations = array();
+            $_branches = array();
+
+            // we can only filter the enumeration from the jobs
+            $result = $this->request($this->getBaseUrl().'job_search', array(), false);
+
+            if(isset($result->hits))
             {
-                $_educations = array_merge($_educations, explode('/', $job->_source->education_level));
-                $_branches = array_merge($_branches, array($job->_source->sector));
+                foreach($result->hits->hits as $job)
+                {
+                    $_educations = array_merge($_educations, explode('/', $job->_source->education_level));
+                    $_branches = array_merge($_branches, array($job->_source->sector));
+                }
             }
+
+            $_educations = array_unique($_educations);
+            $_branches = array_unique($_branches);
+
+            $this->enumeration->setEducations($_educations);
+            $this->enumeration->setBranches($_branches);
         }
-
-        $_educations = array_unique($_educations);
-        $_branches = array_unique($_branches);
-
-        $this->enumeration->setEducations($_educations);
-        $this->enumeration->setBranches($_branches);
     }
 
     /**
