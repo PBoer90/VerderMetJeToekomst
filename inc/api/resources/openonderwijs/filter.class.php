@@ -34,7 +34,7 @@ class Api_Resources_OpenOnderwijs_Filter
             }
         }
 
-        return '?'.implode('&', $_filter);
+        return '?'.implode('&amp;', $_filter);
     }
 
     /**
