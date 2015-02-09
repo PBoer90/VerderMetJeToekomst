@@ -164,22 +164,27 @@ class Api_Resources_CSO extends Api_Resource_Base
 
         $remoteJobFilter = $this->filter->create($filter, $this->enumeration);
 
-        $post = array(
-            'apiKey' => $this->getKey(),
-            'filter' => $remoteJobFilter,
-            'fieldSelection' => array(
-                '__type__' => 'RemoteJobFieldselection',
-                'jobFeatures' => array(
-                    '__type__' => 'RemoteJobFeaturesFieldSelection',
-                    'detail' => true,
-                    'employmentConditions' => true,
-                    'location' => true,
-                ),
-                'organisation' => true
-            )
-        );
+        if($remoteJobFilter !== false)
+        {
+            $post = array(
+                'apiKey' => $this->getKey(),
+                'filter' => $remoteJobFilter,
+                'fieldSelection' => array(
+                    '__type__' => 'RemoteJobFieldselection',
+                    'jobFeatures' => array(
+                        '__type__' => 'RemoteJobFeaturesFieldSelection',
+                        'detail' => true,
+                        'employmentConditions' => true,
+                        'location' => true,
+                    ),
+                    'organisation' => true
+                )
+            );
 
-        return $this->parser->parseJobs($this->request($url, $post));
+            return $this->parser->parseJobs($this->request($url, $post));
+        }
+
+        return array();
     }
 
     /**

@@ -62,10 +62,17 @@ class Api_Resources_OpenOnderwijs extends Api_Resource_Base
     {
         $this->generateEnumeration('educations', 'branches');
 
-        $url = $this->getBaseUrl().'job_search'.$this->filter->create($filter, $this->enumeration);
-        $result = $this->request($url, array(), false);
+        $filter = $this->filter->create($filter, $this->enumeration);
 
-        return $this->parser->parseJobs($result);
+        if($this->filter->failed === false)
+        {
+            $url = $this->getBaseUrl().'job_search';
+            $result = $this->request($url, array(), false);
+
+            return $this->parser->parseJobs($result);
+        }
+
+        return array();
     }
 
     /**

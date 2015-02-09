@@ -8,6 +8,11 @@ class Api_Resources_CSO_Filter
     public $enumeration;
 
     /**
+     * @var bool $failed If false then the filter failed while creating
+     */
+    public $failed =  false;
+
+    /**
      * Creates the filter array
      *
      * @param array $filter Options we want to filter
@@ -78,6 +83,10 @@ class Api_Resources_CSO_Filter
                         'code' => $educationCode
                     );
                 }
+                else
+                {
+                    $this->failed = true;
+                }
             }
         }
     }
@@ -110,6 +119,10 @@ class Api_Resources_CSO_Filter
                         '__type__' => 'JobBranch',
                         'code' => $branchCode
                     );
+                }
+                else
+                {
+                    $this->failed = true;
                 }
             }
         }
@@ -144,6 +157,10 @@ class Api_Resources_CSO_Filter
                         '__type__' => 'Region',
                         'code' => $regionCode
                     );
+                }
+                else
+                {
+                    $this->failed = true;
                 }
             }
         }
