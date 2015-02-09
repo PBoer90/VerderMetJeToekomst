@@ -22,12 +22,19 @@ Carousel.carousel({
  * Slide listener
  */
 $('#mainCarousel').on('slide.bs.carousel', function (slideEvent) {
+    var lastSlide = currentSlide;
     currentSlide = $(slideEvent.relatedTarget).attr('id');
 
-    if(goingBack)
+    if(goingBack) {
         goingBack = false;
-    else
+        for (var i=slideHistory.length-1; i>=0; i--) {
+            if (slideHistory[i] === lastSlide) {
+                slideHistory.splice(i, 1);
+            }
+        }
+    }else {
         slideHistory.push(currentSlide);
+    }
 
     if(currentSlide == 'choice-welcome'){
         slideHistory.length = 0;
