@@ -164,7 +164,7 @@ class Api_Resources_CSO extends Api_Resource_Base
 
         $remoteJobFilter = $this->filter->create($filter, $this->enumeration);
 
-        if($remoteJobFilter !== false)
+        if($this->filter->failed !== false)
         {
             $post = array(
                 'apiKey' => $this->getKey(),
