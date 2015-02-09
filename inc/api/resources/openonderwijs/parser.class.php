@@ -18,6 +18,11 @@ class Api_Resources_OpenOnderwijs_Parser
         {
             foreach($jobs->hits->hits as $job)
             {
+                if(!isset($job->_source->job_location_latitude))
+                {
+                    continue;
+                }
+
                 $newJob['id'] = 'oo-'.$job->_id;
 
                 $newJob['jobCount'] = '1';

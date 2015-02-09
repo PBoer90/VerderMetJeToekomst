@@ -20,6 +20,11 @@ class Api_Resources_CSO_Parser
 
             foreach($jobs as $job)
             {
+                if(!isset($job->features->location->latitude))
+                {
+                    continue;
+                }
+
                 $newJob['id'] = 'cso-'.$job->code;
 
                 $newJob['jobCount'] = $job->features->featuresDetail->jobCount;
