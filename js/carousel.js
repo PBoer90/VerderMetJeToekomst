@@ -33,8 +33,7 @@ $('#mainCarousel').on('slide.bs.carousel', function (slideEvent) {
         carouselNavigation.addClass('disappear');
         icon.addClass('half-rotate');
     }else{
-
-        Slides.getContent(currentSlide);
+        Slide.getContent(currentSlide);
         if(carouselNavigation.hasClass('disappear'))
             carouselNavigation.removeClass('disappear');
 
@@ -44,7 +43,6 @@ $('#mainCarousel').on('slide.bs.carousel', function (slideEvent) {
         carouselNavigation.addClass('appear');
 
     }
-    console.log(slideHistory);
 });
 
 /**
