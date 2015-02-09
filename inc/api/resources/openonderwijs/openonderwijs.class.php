@@ -64,9 +64,9 @@ class Api_Resources_OpenOnderwijs extends Api_Resource_Base
 
         $filter = $this->filter->create($filter, $this->enumeration);
 
-        if($this->filter->failed != false)
+        if($this->filter->failed == false)
         {
-            $url = $this->getBaseUrl().'job_search';
+            $url = $this->getBaseUrl().'job_search'.$filter;
             $result = $this->request($url, array(), false);
 
             return $this->parser->parseJobs($result);
