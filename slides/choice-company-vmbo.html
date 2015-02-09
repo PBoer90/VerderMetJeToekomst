@@ -1,6 +1,24 @@
 <div class="row well well-opacity less-opacity">
-    <div class ="col-lg-12 ">
+    <div class="col-lg-12" id="dropdown-menu">
         <h1 class="welcome">Voorbereidend Middelbaar Beroepsonderwijs</h1>
         <p>In welke sector zoek je een baan?</p>
+        <div class="flex-row">
+            <select class="form-control white" id="sector-dropdown" placeholder="Sector">
+
+            </select>
+        </div>
     </div>
 </div>
+
+<script>
+    $.get('dummy/branches.json', function(data){
+        for(var i = 0; i < data.length; i++){
+            console.log(i);
+            $('#sector-dropdown').append('<option value="'+data[i]+'">'+data[i]+'</option>');
+        }
+
+
+        $('#sector-dropdown').dropdown();
+        loadSlideButtons();
+    });
+</script>

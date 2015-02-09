@@ -103,4 +103,5 @@ function loadSlideButtons(){
     $('.btn-slide').click(function(){
         goToSlide($(this).attr('data-slider'));
     });
+
 }

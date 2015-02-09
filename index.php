@@ -20,6 +20,8 @@
     <link href="css/icon-x.css" rel="stylesheet">
     <link href="material/css/ripples.min.css" rel="stylesheet">
     <link href="material/css/material-wfont.min.css" rel="stylesheet">
+    <link href="material/css/jquery.dropdown.css" rel="stylesheet">
+    <link href="css/dropdown.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="css/full-slider.css" rel="stylesheet">
@@ -228,6 +230,7 @@
     <script src="js/misc.js"></script>
     <script src="js/adapter.js"></script>
     <script src="js/slides.js"></script>
+    <script src="material/js/jquery.dropdown.js"></script>
     <script>
         //Init Material Scripts
         $(document).ready(function() {
