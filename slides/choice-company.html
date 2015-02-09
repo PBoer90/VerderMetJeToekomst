@@ -5,20 +5,9 @@
     </div>
     <div class="col-md-12">
         <div class="flex-row">
-            <button class="btn btn-lg btn-primary btn-slide" data-target="#mainCarousel" data-slide-to="2" id="btn-MBO">MBO</button>
-            <button class="btn btn-lg btn-primary btn-slide" data-target="#mainCarousel" data-slide-to="2" id="btn-MBO">MBO</button>
+            <button class="btn btn-lg btn-primary btn-slide" data-target="#mainCarousel" data-slider="choice-company-hbo" id="btn-HBO">HBO</button>
+            <button class="btn btn-lg btn-primary btn-slide" data-target="#mainCarousel" data-slider="choice-company-mbo" id="btn-MBO">MBO</button>
+            <button class="btn btn-lg btn-primary btn-slide" data-target="#mainCarousel" data-slider="choice-company-vmbo" id="btn-VMBO">VMBO</button>
         </div>
     </div>
 </div>
-
-<script id="ajaxLoad">
-    var educationButton = '<button class="btn btn-lg btn-primary btn-slide" data-target="#mainCarousel" data-slide-to="2" id="btn-MBO">MBO</button>';
-    $.get('dummy/educations.json', function(data) {
-        for(var i =0; i < data.length; i++)
-            $('.flex-row').append(createNavigationButton(data[i].replace(' ','-'), data[i]));
-    });
-
-    function createNavigationButton(target, title){
-        return '<button class="btn btn-lg btn-primary btn-slide" data-target="#mainCarousel" data-slide-to="' + target + '">' + title + '</button>';
-    }
-</script>

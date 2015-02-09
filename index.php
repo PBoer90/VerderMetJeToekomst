@@ -87,11 +87,11 @@
                                 <p>Maak hier je keuze</p>
                             </div>
                             <div class="col-sm-5">
-                                <button class="btn btn-lg btn-primary btn-slide" data-target="#mainCarousel" data-slide-to="1" id="btn-work">Werk</button>
+                                <button class="btn btn-lg btn-primary btn-slide" data-target="#mainCarousel" data-slider="choice-company" id="btn-work">Werk</button>
                             </div>
                                 <div class="col-sm-2">&nbsp;</div>
                             <div class="col-sm-5">
-                                <button class="btn btn-lg btn-primary btn-slide"data-target="#mainCarousel" data-slide-to="2" id="btn-internship">Stage</button>
+                                <button class="btn btn-lg btn-primary btn-slide"data-target="#mainCarousel" data-slider="choice-student" id="btn-internship">Stage</button>
                             </div>
                         </div>
                     </div>
@@ -118,6 +118,39 @@
             <div class="item" id="choice-student">
                 <!-- Set the third background image using inline CSS below. -->
                 <div class="fill" style="background-image:url('img/bg2.jpg');"></div>
+                <div class="carousel-content">
+                    <div class="container-fluid">
+                        <div class="row well well-opacity">
+                            <i class="mdi-notification-sync icon-10x rotating"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item" id="choice-company-hbo">
+                <!-- Set the third background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('img/bg5.jpg');"></div>
+                <div class="carousel-content">
+                    <div class="container-fluid">
+                        <div class="row well well-opacity">
+                            <i class="mdi-notification-sync icon-10x rotating"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item" id="choice-company-vmbo">
+                <!-- Set the third background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('img/bg7.jpg');"></div>
+                <div class="carousel-content">
+                    <div class="container-fluid">
+                        <div class="row well well-opacity">
+                            <i class="mdi-notification-sync icon-10x rotating"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item" id="choice-company-mbo">
+                <!-- Set the third background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('img/bg6.jpg');"></div>
                 <div class="carousel-content">
                     <div class="container-fluid">
                         <div class="row well well-opacity">

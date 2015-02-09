@@ -1,0 +1,2236 @@
+[
+  {
+    "id": "cso-01380-524881658340",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Rijkswaterstaat"
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "city": "Delft",
+      "postcode": "2622 HA"
+    },
+    "hours": {
+      "max": 36,
+      "min": 36
+    },
+    "salary": {
+      "max": 3722
+    },
+    "contractType": "Vaste aanstelling (eventueel met een proeftijd)",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Beleid / Staf/ Advies / Onderzoek / Consultancy"
+    ],
+    "educationLevels": [
+      "Universitair oude stijl",
+      "Universitair Master",
+      "Master/doctoraal"
+    ]
+  },
+  {
+    "id": "cso-01380-417041203169",
+    "jobCount": 2,
+    "organisation": {
+      "name": "Rijkswaterstaat"
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "city": "Delft",
+      "postcode": "2622 HA"
+    },
+    "hours": {
+      "max": 36,
+      "min": 36
+    },
+    "salary": {
+      "max": 2850
+    },
+    "contractType": "Vaste aanstelling (eventueel met een proeftijd)",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Beleid / Staf/ Advies / Onderzoek / Consultancy"
+    ],
+    "educationLevels": [
+      "Universitair oude stijl",
+      "Universitair Master",
+      "Master/doctoraal"
+    ]
+  },
+  {
+    "id": "cso-01380-935383926173",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Rijkswaterstaat"
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "city": "Delft",
+      "postcode": "2622 HA"
+    },
+    "hours": {
+      "max": 36,
+      "min": 36
+    },
+    "salary": {
+      "max": 2850
+    },
+    "contractType": "Vaste aanstelling (eventueel met een proeftijd)",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Beleid / Staf/ Advies / Onderzoek / Consultancy"
+    ],
+    "educationLevels": [
+      "Universitair oude stijl",
+      "Universitair Master",
+      "Master/doctoraal"
+    ]
+  },
+  {
+    "id": "cso-01420-542618321542",
+    "jobCount": 2,
+    "organisation": {
+      "name": "Ministerie van Economische Zaken"
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "city": "Den Haag",
+      "postcode": "2595 CL"
+    },
+    "hours": {
+      "max": 36,
+      "min": 32
+    },
+    "salary": {
+      "max": 2850
+    },
+    "contractType": "Vaste aanstelling (eventueel met een proeftijd)",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Leraar / Onderwijzer",
+      "Onderwijsondersteunend personeel",
+      "Uitvoerend / Ondersteunend"
+    ],
+    "educationLevels": [
+      "HBO oude stijl",
+      "HBO bachelor",
+      "WO bachelor",
+      "Bachelor - HBO"
+    ]
+  },
+  {
+    "id": "cso-01420-050803728762",
+    "jobCount": 3,
+    "organisation": {
+      "name": "Ministerie van Economische Zaken"
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "city": "Den Haag",
+      "postcode": "2595 CL"
+    },
+    "hours": {
+      "max": 36,
+      "min": 32
+    },
+    "salary": {
+      "max": 3340
+    },
+    "contractType": "Vaste aanstelling (eventueel met een proeftijd)",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Leraar / Onderwijzer",
+      "Onderwijsondersteunend personeel",
+      "Uitvoerend / Ondersteunend"
+    ],
+    "educationLevels": [
+      "Universitair oude stijl",
+      "Universitair Master",
+      "Master/doctoraal"
+    ]
+  },
+  {
+    "id": "cso-01380-417077414715",
+    "jobCount": 5,
+    "organisation": {
+      "name": "Rijkswaterstaat"
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "city": "Delft",
+      "postcode": "2622 HA"
+    },
+    "hours": {
+      "max": 36,
+      "min": 36
+    },
+    "salary": {
+      "max": 3340
+    },
+    "contractType": "Vaste aanstelling (eventueel met een proeftijd)",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Beleid / Staf/ Advies / Onderzoek / Consultancy"
+    ],
+    "educationLevels": [
+      "Universitair oude stijl",
+      "Universitair Master",
+      "Master/doctoraal"
+    ]
+  },
+  {
+    "id": "cso-01380-550107006641",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Rijkswaterstaat"
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "city": "Delft",
+      "postcode": "2622 HA"
+    },
+    "hours": {
+      "max": 36,
+      "min": 36
+    },
+    "salary": {
+      "max": 2396
+    },
+    "contractType": "Vaste aanstelling (eventueel met een proeftijd)",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Beleid / Staf/ Advies / Onderzoek / Consultancy"
+    ],
+    "educationLevels": [
+      "HBO oude stijl",
+      "HBO bachelor",
+      "WO bachelor",
+      "Bachelor - HBO"
+    ]
+  },
+  {
+    "id": "cso-01380-525667136155",
+    "jobCount": 4,
+    "organisation": {
+      "name": "Rijkswaterstaat"
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "city": "Delft",
+      "postcode": "2622 HA"
+    },
+    "hours": {
+      "max": 36,
+      "min": 36
+    },
+    "salary": {
+      "max": 2850
+    },
+    "contractType": "Vaste aanstelling (eventueel met een proeftijd)",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Beleid / Staf/ Advies / Onderzoek / Consultancy"
+    ],
+    "educationLevels": [
+      "Universitair oude stijl",
+      "Universitair Master",
+      "Master/doctoraal"
+    ]
+  },
+  {
+    "id": "cso-01380-574509921904",
+    "jobCount": 3,
+    "organisation": {
+      "name": "Rijkswaterstaat"
+    },
+    "location": {
+      "latitude": 52.51817,
+      "longitude": 5.48476,
+      "city": "Lelystad/Delft",
+      "postcode": "8224 AD"
+    },
+    "hours": {
+      "max": 36,
+      "min": 36
+    },
+    "salary": {
+      "max": 2850
+    },
+    "contractType": "Vaste aanstelling (eventueel met een proeftijd)",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Beleid / Staf/ Advies / Onderzoek / Consultancy"
+    ],
+    "educationLevels": [
+      "Universitair oude stijl",
+      "Universitair Master",
+      "Master/doctoraal"
+    ]
+  },
+  {
+    "id": "cso-01380-009181125271",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Rijkswaterstaat"
+    },
+    "location": {
+      "latitude": 51.98513,
+      "longitude": 4.34554,
+      "city": "Delft",
+      "postcode": "2622 HA"
+    },
+    "hours": {
+      "max": 36,
+      "min": 36
+    },
+    "salary": {
+      "max": 3722
+    },
+    "contractType": "Vaste aanstelling (eventueel met een proeftijd)",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Beleid / Staf/ Advies / Onderzoek / Consultancy"
+    ],
+    "educationLevels": [
+      "Universitair oude stijl",
+      "Universitair Master",
+      "Master/doctoraal"
+    ]
+  },
+  {
+    "id": "cso-01840-846890001188",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Algemene Inlichtingen- en Veiligheidsdienst"
+    },
+    "location": {
+      "latitude": 52.0632419,
+      "longitude": 4.4887125,
+      "city": "Zoetermeer",
+      "postcode": "2711 AH"
+    },
+    "hours": {
+      "max": 36,
+      "min": 36
+    },
+    "salary": {
+      "max": 2850
+    },
+    "contractType": "Tijdelijke aanstelling met uitzicht op vaste aanstelling",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Leraar / Onderwijzer",
+      "Onderwijsondersteunend personeel",
+      "Uitvoerend / Ondersteunend"
+    ],
+    "educationLevels": [
+      "HBO oude stijl",
+      "HBO bachelor",
+      "WO bachelor",
+      "Bachelor - HBO"
+    ]
+  },
+  {
+    "id": "cso-01420-185613253863",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Ministerie van Economische Zaken"
+    },
+    "location": {
+      "latitude": 52.08049,
+      "longitude": 4.32013,
+      "city": "Den Haag",
+      "postcode": "2511 WB"
+    },
+    "hours": {
+      "max": 36,
+      "min": 32
+    },
+    "salary": {
+      "max": 2850
+    },
+    "contractType": "Tijdelijke aanstelling voor de duur van project / traject / werkzaamheden",
+    "branches": [
+      "ICT",
+      "Onderzoek/wetenschap",
+      "Techniek/productie"
+    ],
+    "categories": [
+      "Inspectie / Toezicht"
+    ],
+    "educationLevels": [
+      "Universitair oude stijl",
+      "Universitair Master",
+      "Master/doctoraal"
+    ]
+  },
+  {
+    "id": "cso-01380-219096810906",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Rijkswaterstaat"
+    },
+    "location": {
+      "latitude": 51.98513,
+      "longitude": 4.34554,
+      "city": "Delft",
+      "postcode": "2622 HA"
+    },
+    "hours": {
+      "max": 36,
+      "min": 36
+    },
+    "salary": {
+      "max": 3722
+    },
+    "contractType": "Vaste aanstelling (eventueel met een proeftijd)",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Beleid / Staf/ Advies / Onderzoek / Consultancy"
+    ],
+    "educationLevels": [
+      "Universitair oude stijl",
+      "Universitair Master",
+      "Master/doctoraal"
+    ]
+  },
+  {
+    "id": "cso-01535-452982040945",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Uitvoeringsinstituut Werknemersverzekeringen"
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "city": "Amsterdam Sloterdijk",
+      "postcode": "1043 DL"
+    },
+    "hours": {
+      "max": 38,
+      "min": 36
+    },
+    "salary": {
+      "max": 2979
+    },
+    "contractType": "Tijdelijke aanstelling met uitzicht op vaste aanstelling",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Beleid / Staf/ Advies / Onderzoek / Consultancy"
+    ],
+    "educationLevels": [
+      "HBO oude stijl",
+      "HBO bachelor",
+      "WO bachelor",
+      "Bachelor - HBO"
+    ]
+  },
+  {
+    "id": "cso-01310-480641",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Ministerie van Defensie"
+    },
+    "location": {
+      "latitude": 51.9535864,
+      "longitude": 4.2347479,
+      "city": "Maasland",
+      "postcode": "3155 RC"
+    },
+    "hours": {
+      "max": 38,
+      "min": 38
+    },
+    "salary": {
+      "max": 2491
+    },
+    "contractType": "Vaste aanstelling (eventueel met een proeftijd)",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Leraar / Onderwijzer",
+      "Onderwijsondersteunend personeel",
+      "Uitvoerend / Ondersteunend"
+    ],
+    "educationLevels": [
+      "MBO - 4"
+    ]
+  },
+  {
+    "id": "cso-01310-480934",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Ministerie van Defensie"
+    },
+    "location": {
+      "latitude": 52.3010986,
+      "longitude": 4.4778232,
+      "city": "Noordwijkerhout",
+      "postcode": "2204 AH"
+    },
+    "hours": {
+      "max": 38,
+      "min": 38
+    },
+    "salary": {
+      "max": 1978
+    },
+    "contractType": "Vaste aanstelling (eventueel met een proeftijd)",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Leraar / Onderwijzer",
+      "Onderwijsondersteunend personeel",
+      "Uitvoerend / Ondersteunend"
+    ],
+    "educationLevels": [
+      "MBO - 4",
+      "MBO - 3",
+      "MBO - 2",
+      "MBO - 1",
+      "MBO"
+    ]
+  },
+  {
+    "id": "cso-01840-458593527265",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Algemene Inlichtingen- en Veiligheidsdienst"
+    },
+    "location": {
+      "latitude": 52.0632419,
+      "longitude": 4.4887125,
+      "city": "Zoetermeer",
+      "postcode": "2711 AH"
+    },
+    "hours": {
+      "max": 36,
+      "min": 36
+    },
+    "salary": {
+      "max": 2396
+    },
+    "contractType": "Tijdelijke aanstelling met uitzicht op vaste aanstelling",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Leraar / Onderwijzer",
+      "Onderwijsondersteunend personeel",
+      "Uitvoerend / Ondersteunend"
+    ],
+    "educationLevels": [
+      "HBO oude stijl",
+      "HBO bachelor",
+      "WO bachelor",
+      "Bachelor - HBO"
+    ]
+  },
+  {
+    "id": "cso-01840-826362452740",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Algemene Inlichtingen- en Veiligheidsdienst"
+    },
+    "location": {
+      "latitude": 52.0632419,
+      "longitude": 4.4887125,
+      "city": "Zoetermeer",
+      "postcode": "2711 AH"
+    },
+    "hours": {
+      "max": 36,
+      "min": 36
+    },
+    "salary": {
+      "max": 2850
+    },
+    "contractType": "Tijdelijke aanstelling met uitzicht op vaste aanstelling",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Leraar / Onderwijzer",
+      "Onderwijsondersteunend personeel",
+      "Uitvoerend / Ondersteunend"
+    ],
+    "educationLevels": [
+      "HBO oude stijl",
+      "HBO bachelor",
+      "WO bachelor",
+      "Bachelor - HBO"
+    ]
+  },
+  {
+    "id": "cso-01380-997302840719",
+    "jobCount": 3,
+    "organisation": {
+      "name": "Rijkswaterstaat"
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "city": "Rotterdam",
+      "postcode": "2622 HA"
+    },
+    "hours": {
+      "max": 36,
+      "min": 36
+    },
+    "salary": {
+      "max": 3340
+    },
+    "contractType": "Vaste aanstelling (eventueel met een proeftijd)",
+    "branches": [
+      "ICT",
+      "Verkeer/nautisch"
+    ],
+    "categories": [
+      "Beleid / Staf/ Advies / Onderzoek / Consultancy"
+    ],
+    "educationLevels": [
+      "Universitair oude stijl",
+      "Universitair Master",
+      "Master/doctoraal"
+    ]
+  },
+  {
+    "id": "cso-01380-183084258683",
+    "jobCount": 2,
+    "organisation": {
+      "name": "Rijkswaterstaat"
+    },
+    "location": {
+      "latitude": 51.98513,
+      "longitude": 4.34554,
+      "city": "Delft",
+      "postcode": "2622 HA"
+    },
+    "hours": {
+      "max": 36,
+      "min": 36
+    },
+    "salary": {
+      "max": 2850
+    },
+    "contractType": "Vaste aanstelling (eventueel met een proeftijd)",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Beleid / Staf/ Advies / Onderzoek / Consultancy"
+    ],
+    "educationLevels": [
+      "Universitair oude stijl",
+      "Universitair Master",
+      "Master/doctoraal"
+    ]
+  },
+  {
+    "id": "cso-07080-02S0000AZP",
+    "jobCount": null,
+    "organisation": {
+      "name": "Provincie Noord-Holland"
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "city": "Haarlem",
+      "postcode": null
+    },
+    "hours": {
+      "max": 36,
+      "min": null
+    },
+    "salary": {
+      "max": 3513
+    },
+    "contractType": "Tijdelijke aanstelling met uitzicht op vaste aanstelling",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [],
+    "educationLevels": [
+      "Universitair oude stijl",
+      "Universitair Master",
+      "Master/doctoraal",
+      "HBO bachelor"
+    ]
+  },
+  {
+    "id": "cso-01430-834199074303",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Ministerie van Financiën"
+    },
+    "location": {
+      "latitude": 52.0821,
+      "longitude": 4.31546,
+      "city": "Den Haag",
+      "postcode": "2511 CW"
+    },
+    "hours": {
+      "max": 36,
+      "min": null
+    },
+    "salary": {
+      "max": 2280
+    },
+    "contractType": "Vaste aanstelling (eventueel met een proeftijd)",
+    "branches": [
+      "Fiscaal",
+      "Auditing/Accountancy",
+      "Financieel/Economisch",
+      "ICT"
+    ],
+    "categories": [
+      "Leraar / Onderwijzer",
+      "Onderwijsondersteunend personeel",
+      "Uitvoerend / Ondersteunend"
+    ],
+    "educationLevels": [
+      "HBO oude stijl",
+      "HBO bachelor",
+      "WO bachelor",
+      "Bachelor - HBO"
+    ]
+  },
+  {
+    "id": "cso-01840-408441137674",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Algemene Inlichtingen- en Veiligheidsdienst"
+    },
+    "location": {
+      "latitude": 52.0632419,
+      "longitude": 4.4887125,
+      "city": "Zoetermeer",
+      "postcode": "2711 AH"
+    },
+    "hours": {
+      "max": 36,
+      "min": 36
+    },
+    "salary": {
+      "max": 2280
+    },
+    "contractType": "Tijdelijke aanstelling met uitzicht op vaste aanstelling",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Leraar / Onderwijzer",
+      "Onderwijsondersteunend personeel",
+      "Uitvoerend / Ondersteunend"
+    ],
+    "educationLevels": [
+      "MBO - 4",
+      "MBO - 3",
+      "MBO - 2",
+      "MBO - 1",
+      "MBO"
+    ]
+  },
+  {
+    "id": "cso-01380-299345081029",
+    "jobCount": 2,
+    "organisation": {
+      "name": "Rijkswaterstaat"
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "city": "Delft",
+      "postcode": "2622 HA"
+    },
+    "hours": {
+      "max": 36,
+      "min": 36
+    },
+    "salary": {
+      "max": 2850
+    },
+    "contractType": "Vaste aanstelling (eventueel met een proeftijd)",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Beleid / Staf/ Advies / Onderzoek / Consultancy"
+    ],
+    "educationLevels": [
+      "Universitair oude stijl",
+      "Universitair Master",
+      "Master/doctoraal"
+    ]
+  },
+  {
+    "id": "cso-01310-353324",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Ministerie van Defensie"
+    },
+    "location": {
+      "latitude": 52.12486,
+      "longitude": 5.2524938,
+      "city": "Huis ter Heide",
+      "postcode": "3712 BR"
+    },
+    "hours": {
+      "max": 38,
+      "min": 38
+    },
+    "salary": {
+      "max": 3202
+    },
+    "contractType": "Vaste aanstelling (eventueel met een proeftijd)",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Leraar / Onderwijzer",
+      "Onderwijsondersteunend personeel",
+      "Uitvoerend / Ondersteunend"
+    ],
+    "educationLevels": [
+      "HBO oude stijl",
+      "HBO bachelor",
+      "WO bachelor",
+      "Bachelor - HBO"
+    ]
+  },
+  {
+    "id": "cso-09009-230217517793",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Hoogheemraadschap van Delfland"
+    },
+    "location": {
+      "latitude": 52.0106,
+      "longitude": 4.35496,
+      "city": "Delft",
+      "postcode": "2611AL"
+    },
+    "hours": {
+      "max": 36,
+      "min": 36
+    },
+    "salary": {
+      "max": 2078
+    },
+    "contractType": "Tijdelijke aanstelling voor de duur van project / traject / werkzaamheden",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Leraar / Onderwijzer",
+      "Onderwijsondersteunend personeel",
+      "Uitvoerend / Ondersteunend"
+    ],
+    "educationLevels": [
+      "MBO - 4",
+      "MBO - 3",
+      "MBO - 2",
+      "MBO - 1",
+      "MBO"
+    ]
+  },
+  {
+    "id": "cso-01840-584709690648",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Algemene Inlichtingen- en Veiligheidsdienst"
+    },
+    "location": {
+      "latitude": 52.0632419,
+      "longitude": 4.4887125,
+      "city": "Zoetermeer",
+      "postcode": "2711 AH"
+    },
+    "hours": {
+      "max": 36,
+      "min": 36
+    },
+    "salary": {
+      "max": 3340
+    },
+    "contractType": "Tijdelijke aanstelling met uitzicht op vaste aanstelling",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Leraar / Onderwijzer",
+      "Onderwijsondersteunend personeel",
+      "Uitvoerend / Ondersteunend"
+    ],
+    "educationLevels": [
+      "Universitair oude stijl",
+      "Universitair Master",
+      "Master/doctoraal"
+    ]
+  },
+  {
+    "id": "cso-01310-493952",
+    "jobCount": 3,
+    "organisation": {
+      "name": "Ministerie van Defensie"
+    },
+    "location": {
+      "latitude": 52.07958,
+      "longitude": 5.1462987,
+      "city": "Utrecht",
+      "postcode": "3584 AB"
+    },
+    "hours": {
+      "max": 38,
+      "min": 38
+    },
+    "salary": {
+      "max": 2378
+    },
+    "contractType": "Vaste aanstelling (eventueel met een proeftijd)",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Management/directeur",
+      "Management / Leidinggevend"
+    ],
+    "educationLevels": [
+      "Universitair oude stijl",
+      "Universitair Master",
+      "Master/doctoraal"
+    ]
+  },
+  {
+    "id": "cso-01310-481575",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Ministerie van Defensie"
+    },
+    "location": {
+      "latitude": 52.07958,
+      "longitude": 5.1462987,
+      "city": "Utrecht",
+      "postcode": "3584 AB"
+    },
+    "hours": {
+      "max": 38,
+      "min": 38
+    },
+    "salary": {
+      "max": 3891
+    },
+    "contractType": "Vaste aanstelling (eventueel met een proeftijd)",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Beleid / Staf/ Advies / Onderzoek / Consultancy"
+    ],
+    "educationLevels": [
+      "Universitair oude stijl",
+      "Universitair Master",
+      "Master/doctoraal"
+    ]
+  },
+  {
+    "id": "cso-01380-489342639947",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Rijkswaterstaat"
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "city": "Delft",
+      "postcode": "2622 HA"
+    },
+    "hours": {
+      "max": 36,
+      "min": 36
+    },
+    "salary": {
+      "max": 3340
+    },
+    "contractType": "Vaste aanstelling (eventueel met een proeftijd)",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Beleid / Staf/ Advies / Onderzoek / Consultancy"
+    ],
+    "educationLevels": [
+      "Universitair oude stijl",
+      "Universitair Master",
+      "Master/doctoraal"
+    ]
+  },
+  {
+    "id": "cso-02192-177060-171",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Gemeente Haarlem"
+    },
+    "location": {
+      "latitude": 52.3826917,
+      "longitude": 4.6296271,
+      "city": "Haarlem",
+      "postcode": "2011 VB"
+    },
+    "hours": {
+      "max": 36,
+      "min": 36
+    },
+    "salary": {
+      "max": 0
+    },
+    "contractType": "Vaste aanstelling (eventueel met een proeftijd)",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Management/directeur",
+      "Management / Leidinggevend"
+    ],
+    "educationLevels": [
+      "HBO oude stijl",
+      "HBO bachelor",
+      "WO bachelor",
+      "Bachelor - HBO"
+    ]
+  },
+  {
+    "id": "cso-01840-440656780600",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Algemene Inlichtingen- en Veiligheidsdienst"
+    },
+    "location": {
+      "latitude": 52.0632419,
+      "longitude": 4.4887125,
+      "city": "Zoetermeer",
+      "postcode": "2711 AH"
+    },
+    "hours": {
+      "max": 36,
+      "min": 36
+    },
+    "salary": {
+      "max": 3340
+    },
+    "contractType": "Tijdelijke aanstelling met uitzicht op vaste aanstelling",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Leraar / Onderwijzer",
+      "Onderwijsondersteunend personeel",
+      "Uitvoerend / Ondersteunend"
+    ],
+    "educationLevels": [
+      "HBO oude stijl",
+      "HBO bachelor",
+      "WO bachelor",
+      "Bachelor - HBO"
+    ]
+  },
+  {
+    "id": "cso-01380-324271623121",
+    "jobCount": 3,
+    "organisation": {
+      "name": "Rijkswaterstaat"
+    },
+    "location": {
+      "latitude": 51.915,
+      "longitude": 4.48763,
+      "city": "Rotterdam",
+      "postcode": "3011 XD"
+    },
+    "hours": {
+      "max": 36,
+      "min": 36
+    },
+    "salary": {
+      "max": 3340
+    },
+    "contractType": "Vaste aanstelling (eventueel met een proeftijd)",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Beleid / Staf/ Advies / Onderzoek / Consultancy"
+    ],
+    "educationLevels": [
+      "Universitair oude stijl",
+      "Universitair Master",
+      "Master/doctoraal"
+    ]
+  },
+  {
+    "id": "cso-01310-326441",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Ministerie van Defensie"
+    },
+    "location": {
+      "latitude": 52.1085905,
+      "longitude": 4.3087968,
+      "city": "Den Haag",
+      "postcode": "2597 BC"
+    },
+    "hours": {
+      "max": 38,
+      "min": 38
+    },
+    "salary": {
+      "max": 2378
+    },
+    "contractType": "Vaste aanstelling (eventueel met een proeftijd)",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Leraar / Onderwijzer",
+      "Onderwijsondersteunend personeel",
+      "Uitvoerend / Ondersteunend"
+    ],
+    "educationLevels": [
+      "HBO oude stijl",
+      "HBO bachelor",
+      "WO bachelor",
+      "Bachelor - HBO"
+    ]
+  },
+  {
+    "id": "cso-01491-449983890725",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Ministerie van Veiligheid en Justitie - JustID"
+    },
+    "location": {
+      "latitude": 52.3460035,
+      "longitude": 6.65143,
+      "city": "Almelo",
+      "postcode": "7606 GB"
+    },
+    "hours": {
+      "max": 36,
+      "min": null
+    },
+    "salary": {
+      "max": 2396
+    },
+    "contractType": "Tijdelijke aanstelling met uitzicht op vaste aanstelling",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Leraar / Onderwijzer",
+      "Onderwijsondersteunend personeel",
+      "Uitvoerend / Ondersteunend"
+    ],
+    "educationLevels": [
+      "HBO oude stijl",
+      "HBO bachelor",
+      "WO bachelor",
+      "Bachelor - HBO"
+    ]
+  },
+  {
+    "id": "cso-01481-943030054688",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Ministerie van Veiligheid en Justitie - Dienst Justitiële Inrichtingen"
+    },
+    "location": {
+      "latitude": 52.02299,
+      "longitude": 5.67151,
+      "city": "Ede",
+      "postcode": "6717 LL"
+    },
+    "hours": {
+      "max": 36,
+      "min": 36
+    },
+    "salary": {
+      "max": 2850
+    },
+    "contractType": "Vaste aanstelling (eventueel met een proeftijd)",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Leraar / Onderwijzer",
+      "Onderwijsondersteunend personeel",
+      "Uitvoerend / Ondersteunend"
+    ],
+    "educationLevels": [
+      "HBO oude stijl",
+      "HBO bachelor",
+      "WO bachelor",
+      "Bachelor - HBO"
+    ]
+  },
+  {
+    "id": "cso-01380-139882197238",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Rijkswaterstaat"
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "city": "Delft",
+      "postcode": "2622 HA"
+    },
+    "hours": {
+      "max": 36,
+      "min": 36
+    },
+    "salary": {
+      "max": 3340
+    },
+    "contractType": "Vaste aanstelling (eventueel met een proeftijd)",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Beleid / Staf/ Advies / Onderzoek / Consultancy"
+    ],
+    "educationLevels": [
+      "Universitair oude stijl",
+      "Universitair Master",
+      "Master/doctoraal"
+    ]
+  },
+  {
+    "id": "cso-01380-567787346687",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Rijkswaterstaat"
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "city": "Delft",
+      "postcode": "2622 HA"
+    },
+    "hours": {
+      "max": 36,
+      "min": 36
+    },
+    "salary": {
+      "max": 3722
+    },
+    "contractType": "Vaste aanstelling (eventueel met een proeftijd)",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Beleid / Staf/ Advies / Onderzoek / Consultancy"
+    ],
+    "educationLevels": [
+      "Universitair oude stijl",
+      "Universitair Master",
+      "Master/doctoraal"
+    ]
+  },
+  {
+    "id": "cso-01310-494684",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Ministerie van Defensie"
+    },
+    "location": {
+      "latitude": 52.150656,
+      "longitude": 5.3552636,
+      "city": "Amersfoort",
+      "postcode": "3818 LN"
+    },
+    "hours": {
+      "max": 38,
+      "min": 38
+    },
+    "salary": {
+      "max": 3891
+    },
+    "contractType": "Vaste aanstelling (eventueel met een proeftijd)",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Leraar / Onderwijzer",
+      "Onderwijsondersteunend personeel",
+      "Uitvoerend / Ondersteunend"
+    ],
+    "educationLevels": [
+      "Universitair Master"
+    ]
+  },
+  {
+    "id": "cso-01310-474005",
+    "jobCount": 5,
+    "organisation": {
+      "name": "Ministerie van Defensie"
+    },
+    "location": {
+      "latitude": 52.150656,
+      "longitude": 5.3552636,
+      "city": "Amersfoort",
+      "postcode": "3818 LN"
+    },
+    "hours": {
+      "max": 38,
+      "min": 38
+    },
+    "salary": {
+      "max": 2378
+    },
+    "contractType": "Vaste aanstelling (eventueel met een proeftijd)",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Leraar / Onderwijzer",
+      "Onderwijsondersteunend personeel",
+      "Uitvoerend / Ondersteunend"
+    ],
+    "educationLevels": [
+      "Universitair Master"
+    ]
+  },
+  {
+    "id": "cso-01380-933061070569",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Rijkswaterstaat"
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "city": "Delft",
+      "postcode": "2622 HA"
+    },
+    "hours": {
+      "max": 36,
+      "min": 36
+    },
+    "salary": {
+      "max": 3340
+    },
+    "contractType": "Vaste aanstelling (eventueel met een proeftijd)",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Beleid / Staf/ Advies / Onderzoek / Consultancy"
+    ],
+    "educationLevels": [
+      "Universitair oude stijl",
+      "Universitair Master",
+      "Master/doctoraal"
+    ]
+  },
+  {
+    "id": "cso-01380-076416083539",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Rijkswaterstaat"
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "city": "Delft",
+      "postcode": "2622 HA"
+    },
+    "hours": {
+      "max": 36,
+      "min": 36
+    },
+    "salary": {
+      "max": 3340
+    },
+    "contractType": "Vaste aanstelling (eventueel met een proeftijd)",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Beleid / Staf/ Advies / Onderzoek / Consultancy"
+    ],
+    "educationLevels": [
+      "Universitair oude stijl",
+      "Universitair Master",
+      "Master/doctoraal"
+    ]
+  },
+  {
+    "id": "cso-01420-423102316413",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Ministerie van Economische Zaken"
+    },
+    "location": {
+      "latitude": 52.08049,
+      "longitude": 4.32013,
+      "city": "Den Haag",
+      "postcode": "2511 WB"
+    },
+    "hours": {
+      "max": 36,
+      "min": 36
+    },
+    "salary": {
+      "max": 2850
+    },
+    "contractType": "Tijdelijke aanstelling voor de duur van project / traject / werkzaamheden",
+    "branches": [
+      "Telecom",
+      "ICT",
+      "Techniek/productie"
+    ],
+    "categories": [
+      "Inspectie / Toezicht"
+    ],
+    "educationLevels": [
+      "Universitair oude stijl",
+      "Universitair Master",
+      "Master/doctoraal"
+    ]
+  },
+  {
+    "id": "cso-02133-281779331098",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Gemeente Deventer"
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "city": "Deventer",
+      "postcode": "7411 TH"
+    },
+    "hours": {
+      "max": 36,
+      "min": 36
+    },
+    "salary": {
+      "max": 4186
+    },
+    "contractType": "Vaste aanstelling (eventueel met een proeftijd)",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Management/directeur",
+      "Management / Leidinggevend"
+    ],
+    "educationLevels": [
+      "Universitair oude stijl",
+      "Universitair Master",
+      "Master/doctoraal"
+    ]
+  },
+  {
+    "id": "cso-01380-542671425974",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Rijkswaterstaat"
+    },
+    "location": {
+      "latitude": 51.98513,
+      "longitude": 4.34554,
+      "city": "Delft",
+      "postcode": "2622 HA"
+    },
+    "hours": {
+      "max": 36,
+      "min": 36
+    },
+    "salary": {
+      "max": 3340
+    },
+    "contractType": "Vaste aanstelling (eventueel met een proeftijd)",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Management/directeur",
+      "Management / Leidinggevend"
+    ],
+    "educationLevels": [
+      "Universitair oude stijl",
+      "Universitair Master",
+      "Master/doctoraal"
+    ]
+  },
+  {
+    "id": "cso-01535-919627137507",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Uitvoeringsinstituut Werknemersverzekeringen"
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "city": "Amsterdam Sloterdijk",
+      "postcode": "1043 DL"
+    },
+    "hours": {
+      "max": 38,
+      "min": 32
+    },
+    "salary": {
+      "max": 3380
+    },
+    "contractType": "Tijdelijke aanstelling voor de duur van project / traject / werkzaamheden",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Beleid / Staf/ Advies / Onderzoek / Consultancy",
+      "Leraar / Onderwijzer",
+      "Onderwijsondersteunend personeel",
+      "Uitvoerend / Ondersteunend"
+    ],
+    "educationLevels": [
+      "HBO oude stijl",
+      "HBO bachelor",
+      "WO bachelor",
+      "Bachelor - HBO"
+    ]
+  },
+  {
+    "id": "cso-01535-730125779106",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Uitvoeringsinstituut Werknemersverzekeringen"
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "city": "Amsterdam Sloterdijk",
+      "postcode": "1043 DL"
+    },
+    "hours": {
+      "max": 38,
+      "min": 36
+    },
+    "salary": {
+      "max": 3820
+    },
+    "contractType": "Tijdelijke aanstelling met uitzicht op vaste aanstelling",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Beleid / Staf/ Advies / Onderzoek / Consultancy"
+    ],
+    "educationLevels": [
+      "Universitair oude stijl",
+      "Universitair Master",
+      "Master/doctoraal"
+    ]
+  },
+  {
+    "id": "cso-01535-852805227853",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Uitvoeringsinstituut Werknemersverzekeringen"
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "city": "Amsterdam Sloterdijk",
+      "postcode": "1043 DL"
+    },
+    "hours": {
+      "max": 38,
+      "min": 32
+    },
+    "salary": {
+      "max": 2979
+    },
+    "contractType": "Tijdelijke aanstelling voor de duur van project / traject / werkzaamheden",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Beleid / Staf/ Advies / Onderzoek / Consultancy"
+    ],
+    "educationLevels": [
+      "HBO oude stijl",
+      "HBO bachelor",
+      "WO bachelor",
+      "Bachelor - HBO"
+    ]
+  },
+  {
+    "id": "cso-01535-032629039956",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Uitvoeringsinstituut Werknemersverzekeringen"
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "city": "Amsterdam Sloterdijk",
+      "postcode": "1043 DL"
+    },
+    "hours": {
+      "max": 38,
+      "min": 36
+    },
+    "salary": {
+      "max": 3820
+    },
+    "contractType": "Tijdelijke aanstelling voor de duur van project / traject / werkzaamheden",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Beleid / Staf/ Advies / Onderzoek / Consultancy"
+    ],
+    "educationLevels": [
+      "Universitair oude stijl",
+      "Universitair Master",
+      "Master/doctoraal"
+    ]
+  },
+  {
+    "id": "cso-01535-737329566758",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Uitvoeringsinstituut Werknemersverzekeringen"
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "city": "Amsterdam Sloterdijk",
+      "postcode": "1043 DL"
+    },
+    "hours": {
+      "max": 38,
+      "min": 36
+    },
+    "salary": {
+      "max": 2979
+    },
+    "contractType": "Tijdelijke aanstelling met uitzicht op vaste aanstelling",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Beleid / Staf/ Advies / Onderzoek / Consultancy"
+    ],
+    "educationLevels": [
+      "Universitair Master"
+    ]
+  },
+  {
+    "id": "cso-01535-798827463611",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Uitvoeringsinstituut Werknemersverzekeringen"
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "city": "Amsterdam Sloterdijk",
+      "postcode": "1043 DL"
+    },
+    "hours": {
+      "max": 38,
+      "min": 36
+    },
+    "salary": {
+      "max": 2979
+    },
+    "contractType": "Tijdelijke aanstelling met uitzicht op vaste aanstelling",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Beleid / Staf/ Advies / Onderzoek / Consultancy",
+      "Leraar / Onderwijzer",
+      "Onderwijsondersteunend personeel",
+      "Uitvoerend / Ondersteunend"
+    ],
+    "educationLevels": [
+      "HBO oude stijl",
+      "HBO bachelor",
+      "WO bachelor",
+      "Bachelor - HBO"
+    ]
+  },
+  {
+    "id": "cso-01535-117458548922",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Uitvoeringsinstituut Werknemersverzekeringen"
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "city": "Amsterdam Sloterdijk",
+      "postcode": "1043 DL"
+    },
+    "hours": {
+      "max": 38,
+      "min": 32
+    },
+    "salary": {
+      "max": 2979
+    },
+    "contractType": "Tijdelijke aanstelling met uitzicht op vaste aanstelling",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Beleid / Staf/ Advies / Onderzoek / Consultancy"
+    ],
+    "educationLevels": [
+      "HBO oude stijl",
+      "HBO bachelor",
+      "WO bachelor",
+      "Bachelor - HBO"
+    ]
+  },
+  {
+    "id": "cso-01535-854901709846",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Uitvoeringsinstituut Werknemersverzekeringen"
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "city": "Amsterdam Sloterdijk",
+      "postcode": "1043 DL"
+    },
+    "hours": {
+      "max": 38,
+      "min": 36
+    },
+    "salary": {
+      "max": 2979
+    },
+    "contractType": "Tijdelijke aanstelling voor de duur van project / traject / werkzaamheden",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Beleid / Staf/ Advies / Onderzoek / Consultancy"
+    ],
+    "educationLevels": [
+      "HBO oude stijl",
+      "HBO bachelor",
+      "WO bachelor",
+      "Bachelor - HBO"
+    ]
+  },
+  {
+    "id": "cso-01535-642123267908",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Uitvoeringsinstituut Werknemersverzekeringen"
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "city": "Amsterdam Sloterdijk",
+      "postcode": "1043 DL"
+    },
+    "hours": {
+      "max": 38,
+      "min": 36
+    },
+    "salary": {
+      "max": 2979
+    },
+    "contractType": "Tijdelijke aanstelling met uitzicht op vaste aanstelling",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Beleid / Staf/ Advies / Onderzoek / Consultancy"
+    ],
+    "educationLevels": [
+      "HBO oude stijl",
+      "HBO bachelor",
+      "WO bachelor",
+      "Bachelor - HBO"
+    ]
+  },
+  {
+    "id": "cso-01535-851304787039",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Uitvoeringsinstituut Werknemersverzekeringen"
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "city": "Amsterdam Sloterdijk",
+      "postcode": "1043 DL"
+    },
+    "hours": {
+      "max": 38,
+      "min": 36
+    },
+    "salary": {
+      "max": 3380
+    },
+    "contractType": "Tijdelijke aanstelling met uitzicht op vaste aanstelling",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Management/directeur",
+      "Management / Leidinggevend"
+    ],
+    "educationLevels": [
+      "HBO oude stijl",
+      "HBO bachelor",
+      "WO bachelor",
+      "Bachelor - HBO"
+    ]
+  },
+  {
+    "id": "cso-01535-700359575101",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Uitvoeringsinstituut Werknemersverzekeringen"
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "city": "Amsterdam Sloterdijk",
+      "postcode": "1043 DL"
+    },
+    "hours": {
+      "max": 38,
+      "min": 36
+    },
+    "salary": {
+      "max": 2979
+    },
+    "contractType": "Tijdelijke aanstelling met uitzicht op vaste aanstelling",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Beleid / Staf/ Advies / Onderzoek / Consultancy"
+    ],
+    "educationLevels": [
+      "HBO oude stijl",
+      "HBO bachelor",
+      "WO bachelor",
+      "Bachelor - HBO"
+    ]
+  },
+  {
+    "id": "cso-01535-279932694166",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Uitvoeringsinstituut Werknemersverzekeringen"
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "city": "Amsterdam Sloterdijk",
+      "postcode": "1043 DL"
+    },
+    "hours": {
+      "max": 38,
+      "min": 36
+    },
+    "salary": {
+      "max": 2979
+    },
+    "contractType": "Tijdelijke aanstelling voor de duur van project / traject / werkzaamheden",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Beleid / Staf/ Advies / Onderzoek / Consultancy"
+    ],
+    "educationLevels": [
+      "HBO oude stijl",
+      "HBO bachelor",
+      "WO bachelor",
+      "Bachelor - HBO"
+    ]
+  },
+  {
+    "id": "cso-01535-186632608811",
+    "jobCount": 1,
+    "organisation": {
+      "name": "Uitvoeringsinstituut Werknemersverzekeringen"
+    },
+    "location": {
+      "latitude": null,
+      "longitude": null,
+      "city": "Amsterdam Sloterdijk",
+      "postcode": "1043 DL"
+    },
+    "hours": {
+      "max": 38,
+      "min": 36
+    },
+    "salary": {
+      "max": 2979
+    },
+    "contractType": "Tijdelijke aanstelling met uitzicht op vaste aanstelling",
+    "branches": [
+      "ICT"
+    ],
+    "categories": [
+      "Beleid / Staf/ Advies / Onderzoek / Consultancy"
+    ],
+    "educationLevels": [
+      "HBO oude stijl",
+      "HBO bachelor",
+      "WO bachelor",
+      "Bachelor - HBO"
+    ]
+  },
+  {
+    "id": "oo-mF05SHU3SSu4NARbwpj7UQ",
+    "jobCount": "1",
+    "organisation": {
+      "name": "Faculteit der Letteren"
+    },
+    "location": {
+      "latitude": "51.835",
+      "longitude": "5.85333",
+      "city": "Nijmegen",
+      "postcode": 6500
+    },
+    "hours": {
+      "max": 38,
+      "min": 38
+    },
+    "salary": {
+      "max": ""
+    },
+    "contractType": "Possibly permanent contract",
+    "branches": [
+      "Onderwijs / Onderzoek"
+    ],
+    "categories": [
+      "hoogleraar toegepaste wiskunde"
+    ],
+    "educationLevels": [
+      "Post_WO"
+    ]
+  },
+  {
+    "id": "oo--6WpnF85SoudvVnDrdqIVQ",
+    "jobCount": "1",
+    "organisation": {
+      "name": "Florere"
+    },
+    "location": {
+      "latitude": "52.63",
+      "longitude": "4.74667",
+      "city": "Alkmaar",
+      "postcode": 1800
+    },
+    "hours": {
+      "max": "",
+      "min": ""
+    },
+    "salary": {
+      "max": 70
+    },
+    "contractType": "Permanent contract",
+    "branches": [
+      "Arbeidsbemiddeling"
+    ],
+    "categories": [
+      "Bedrijfsleider"
+    ],
+    "educationLevels": [
+      "HBO"
+    ]
+  },
+  {
+    "id": "oo-5UG1bri6ShulZxEpwlTdqQ",
+    "jobCount": "1",
+    "organisation": {
+      "name": "Sanoma Media Netherlands B.V."
+    },
+    "location": {
+      "latitude": "52.0817",
+      "longitude": "5.03667",
+      "city": "De Meern",
+      "postcode": 3453
+    },
+    "hours": {
+      "max": 12,
+      "min": 12
+    },
+    "salary": {
+      "max": ""
+    },
+    "contractType": "Permanent contract",
+    "branches": [
+      "Arbeidsbemiddeling"
+    ],
+    "categories": [
+      "chauffeur"
+    ],
+    "educationLevels": [
+      "MBO"
+    ]
+  },
+  {
+    "id": "oo-UqM9FqMWTQy-LW5lls4r7A",
+    "jobCount": "1",
+    "organisation": {
+      "name": "CLS Services"
+    },
+    "location": {
+      "latitude": "",
+      "longitude": "",
+      "city": "",
+      "postcode": 0
+    },
+    "hours": {
+      "max": "",
+      "min": ""
+    },
+    "salary": {
+      "max": ""
+    },
+    "contractType": "Permanent contract",
+    "branches": [
+      "Arbeidsbemiddeling"
+    ],
+    "categories": [
+      "regulatory affairs scientist"
+    ],
+    "educationLevels": [
+      "WO"
+    ]
+  },
+  {
+    "id": "oo-ijB3laK3QpSP0X9nkaj1nA",
+    "jobCount": "1",
+    "organisation": {
+      "name": "Deventer Ziekenhuis"
+    },
+    "location": {
+      "latitude": "52.2",
+      "longitude": "6.205",
+      "city": "Gorssel",
+      "postcode": 7213
+    },
+    "hours": {
+      "max": 36,
+      "min": 36
+    },
+    "salary": {
+      "max": 3216
+    },
+    "contractType": "Permanent contract",
+    "branches": [
+      "Gezondheidszorg / Welzijn"
+    ],
+    "categories": [
+      "anesthesiemedewerker"
+    ],
+    "educationLevels": [
+      "HBO",
+      "WO"
+    ]
+  },
+  {
+    "id": "oo-Ig_ecDzdRoKWKeagnFwyhg",
+    "jobCount": "1",
+    "organisation": {
+      "name": "Blokker"
+    },
+    "location": {
+      "latitude": "52.24",
+      "longitude": "5.375",
+      "city": "Bunschoten Spakenburg",
+      "postcode": 3750
+    },
+    "hours": {
+      "max": 12,
+      "min": 12
+    },
+    "salary": {
+      "max": ""
+    },
+    "contractType": "Permanent contract",
+    "branches": [
+      "Handel"
+    ],
+    "categories": [
+      "verkoper"
+    ],
+    "educationLevels": [
+      "VMBO"
+    ]
+  },
+  {
+    "id": "oo-lqFROtClTeecc8qZEPyMeA",
+    "jobCount": "1",
+    "organisation": {
+      "name": "Blokker"
+    },
+    "location": {
+      "latitude": "52.21",
+      "longitude": "5.97",
+      "city": "Apeldoorn",
+      "postcode": 7300
+    },
+    "hours": {
+      "max": 20,
+      "min": 32
+    },
+    "salary": {
+      "max": ""
+    },
+    "contractType": "Internship / Graduation position",
+    "branches": [
+      "Handel"
+    ],
+    "categories": [
+      "stage / afstudeerplaats / bbl"
+    ],
+    "educationLevels": [
+      "MBO"
+    ]
+  },
+  {
+    "id": "oo-re38cs3cRXuFbP6J5erM_g",
+    "jobCount": "1",
+    "organisation": {
+      "name": "Shopmarkt"
+    },
+    "location": {
+      "latitude": "52.2917",
+      "longitude": "4.585",
+      "city": "Hillegom",
+      "postcode": 2180
+    },
+    "hours": {
+      "max": 32,
+      "min": 40
+    },
+    "salary": {
+      "max": ""
+    },
+    "contractType": "Permanent contract",
+    "branches": [
+      "Handel"
+    ],
+    "categories": [
+      "programmeur php"
+    ],
+    "educationLevels": [
+      "MBO",
+      "HBO"
+    ]
+  },
+  {
+    "id": "oo-SNLOA168TzacZmfsJld6EA",
+    "jobCount": "1",
+    "organisation": {
+      "name": "Grant Thornton"
+    },
+    "location": {
+      "latitude": "52.015",
+      "longitude": "4.71333",
+      "city": "Gouda",
+      "postcode": 2800
+    },
+    "hours": {
+      "max": "",
+      "min": ""
+    },
+    "salary": {
+      "max": ""
+    },
+    "contractType": "Permanent contract",
+    "branches": [
+      "Zakelijke dienstverlening"
+    ],
+    "categories": [
+      "assistent-accountant"
+    ],
+    "educationLevels": [
+      "HBO"
+    ]
+  },
+  {
+    "id": "oo-gfgvbuIpQm-MRmwUEDdmKQ",
+    "jobCount": "1",
+    "organisation": {
+      "name": ""
+    },
+    "location": {
+      "latitude": "52.6283",
+      "longitude": "4.76",
+      "city": "Oudorp NH",
+      "postcode": 1829
+    },
+    "hours": {
+      "max": 2,
+      "min": 2
+    },
+    "salary": {
+      "max": 11
+    },
+    "contractType": "Permanent contract",
+    "branches": [
+      "Overig / Onbekend"
+    ],
+    "categories": [
+      "sportinstructeur"
+    ],
+    "educationLevels": [
+      "MBO",
+      "HBO"
+    ]
+  }
+]

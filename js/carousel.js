@@ -8,6 +8,7 @@ var carouselNavigation = $('#slide-navigation');
 var icon = carouselNavigation.find('i');
 var slides = setSlides();
 var goingBack = false;
+loadSlideButtons();
 
 /**
  * Init Carousel
@@ -62,9 +63,11 @@ function setSlides(){
  * @param x int|string
  */
 function goToSlide(x){
+    console.log('going to slide '+x);
     if(isInt(x)){
         Carousel.carousel(x);
     }else{
+        console.log(slides[x]);
         Carousel.carousel(slides[x]);
     }
 }
@@ -84,3 +87,13 @@ carouselNavigation.click(function(){
             goToSlide(slideHistory[slideHistory.length -2]);
 });
 
+/**
+ * Load the slide buttons into the document
+ * and make sure we can slide to a new slider after
+ * an ajax request
+ */
+function loadSlideButtons(){
+    $('.btn-slide').click(function(){
+        goToSlide($(this).attr('data-slider'));
+    });
+}
