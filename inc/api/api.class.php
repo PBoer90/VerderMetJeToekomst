@@ -86,9 +86,10 @@ class Api
     /**
      * Returns all possible branches
      *
+     * @param bool $json [optional] Output json
      * @return string Branches
      */
-    public function getBranches()
+    public function getBranches($json = true)
     {
         $branches = array();
 
@@ -102,15 +103,23 @@ class Api
         $branches = array_unique($branches);
         $branches = array_values($branches);
 
-        return $this->output($branches);
+        if($json === true)
+        {
+            return $this->output($branches);
+        }
+        else
+        {
+            return $branches;
+        }
     }
 
     /**
      * Gets all the educations we got
      *
+     * @param bool $json [optional] Output json
      * @return string Educations
      */
-    public function getEducations()
+    public function getEducations($json = true)
     {
         $educations = array();
 
@@ -124,7 +133,15 @@ class Api
         $educations = array_unique($educations);
         $educations = array_values($educations);
 
-        return $this->output($educations);
+
+        if($json === true)
+        {
+            return $this->output($educations);
+        }
+        else
+        {
+            return $educations;
+        }
     }
 
     /**
