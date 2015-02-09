@@ -7,13 +7,14 @@ var Carousel = $('.carousel');
 var carouselNavigation = $('#slide-navigation');
 var icon = carouselNavigation.find('i');
 var slides = setSlides();
+var goingBack = false;
 
 /**
  * Init Carousel
  */
 Carousel.carousel({
     interval: 0, //We don't want an automatic changing carousel
-    keyboard: false
+    keyboard: false //Only interact with navigation we allow
 });
 
 /**
@@ -21,8 +22,14 @@ Carousel.carousel({
  */
 $('#mainCarousel').on('slide.bs.carousel', function (slideEvent) {
     currentSlide = $(slideEvent.relatedTarget).attr('id');
-    slideHistory.push(currentSlide);
+
+    if(goingBack)
+        goingBack = false;
+    else
+        slideHistory.push(currentSlide);
+
     if(currentSlide == 'choice-welcome'){
+        slideHistory.length = 0;
         carouselNavigation.addClass('disappear');
         icon.addClass('half-rotate');
     }else{
@@ -37,6 +44,7 @@ $('#mainCarousel').on('slide.bs.carousel', function (slideEvent) {
         carouselNavigation.addClass('appear');
 
     }
+    console.log(slideHistory);
 });
 
 /**
@@ -48,7 +56,6 @@ function setSlides(){
     $('.carousel-inner .item').each(function(slideNumber, element){
         obj[$(element).attr('id')] = slideNumber;
     });
-    slideHistory.push(currentSlide);
     return obj;
 }
 
@@ -66,8 +73,16 @@ function goToSlide(x){
 
 /**
  * Go back a slide from the current slide
+ * If we don't have any history we need to go to the welcome slide
  */
 carouselNavigation.click(function(){
-    goToSlide(slideHistory[slideHistory.length -2]);
+    goingBack = true;
+    if(slideHistory.length < 2)
+        goToSlide('choice-welcome');
+    else
+        if(currentSlide == slideHistory[slideHistory.length -2])
+            goToSlide('choice-welcome');
+        else
+            goToSlide(slideHistory[slideHistory.length -2]);
 });
 
