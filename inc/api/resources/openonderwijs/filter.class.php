@@ -39,7 +39,9 @@ class Api_Resources_OpenOnderwijs_Filter
             }
         }
 
-        return '?'.implode('&amp;', $_filter);
+        array_push($_filter, 'size=1000');
+
+        return '?'.implode('&', $_filter);
     }
 
     /**
@@ -64,7 +66,7 @@ class Api_Resources_OpenOnderwijs_Filter
                     }
                 }
 
-                array_push($_filter, 'education_levels='.implode(',', $education));
+                array_push($_filter, 'education_level='.implode(',', $education));
             }
 
             if(is_string($education))
@@ -73,7 +75,7 @@ class Api_Resources_OpenOnderwijs_Filter
                 {
                     $this->failed = true;
                 }
-                array_push($_filter, 'education_levels='.$education);
+                array_push($_filter, 'education_level='.$education);
             }
         }
     }
@@ -111,6 +113,28 @@ class Api_Resources_OpenOnderwijs_Filter
                 }
 
                 array_push($_filter, 'sector='.$branch);
+            }
+        }
+    }
+
+    /**
+     * Creates region filter part
+     *
+     * @param array $_filter The filter array
+     * @param array|string $region The region(s)
+     */
+    public function createRegionFilter(&$_filter, $region)
+    {
+        if($region !== null)
+        {
+            if(is_array($region))
+            {
+                array_push($_filter, 'q='.implode(',', $region));
+            }
+
+            if(is_string($region))
+            {
+                array_push($_filter, 'q='.$region);
             }
         }
     }

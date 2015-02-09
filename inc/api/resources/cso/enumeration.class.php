@@ -9,18 +9,8 @@ class Api_Resources_CSO_Enumeration extends Api_Resource_Enumeration_Base
 
     /**
      * @var array $regions Array with all the regions
-     * TODO - GET DATA DYNAMICALLY
      */
-    private $regions = array(
-        'Gelderland' => 'BRG.0210',
-        'Flevoland' => 'BRG.0212',
-        'Utrecht' => 'BRG.0214',
-        'Noord-Holland' => 'BRG.0216',
-        'Zuid-Holland' => 'BRG.0218',
-        'Zeeland' => 'BRG.0220',
-        'Noord-Brabant' => 'BRG.0222',
-        'Caribisch Nederland' => 'BRG.0226'
-    );
+    private $regions = array();
 
     /**
      * @var array $branches Array with all the branches
@@ -121,6 +111,26 @@ class Api_Resources_CSO_Enumeration extends Api_Resource_Enumeration_Base
     public function getBranches()
     {
         return array_keys($this->branches);
+    }
+
+    /**
+     * Sets the regions
+     *
+     * @param array $regions The regions
+     */
+    public function setRegions($regions)
+    {
+        $this->regions = $regions;
+    }
+
+    /**
+     * Returns true if we have regions
+     *
+     * @return bool True when we got regions else false
+     */
+    public function hasRegions()
+    {
+        return count($this->regions) > 0 ? true : false;
     }
 
     /**

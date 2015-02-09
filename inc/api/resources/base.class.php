@@ -2,7 +2,6 @@
 
 abstract class Api_Resource_Base
 {
-    abstract public function getJob($code);
     abstract public function getJobs($filter);
 
     /**

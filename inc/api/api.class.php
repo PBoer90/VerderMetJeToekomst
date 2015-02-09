@@ -33,32 +33,6 @@ class Api
     }
 
     /**
-     * Gets all information from one job
-     *
-     * @param string $id The job id
-     * @return array Job data
-     */
-    public function getJob($id)
-    {
-        $parts = explode('-', $id);
-        $resourceIdentifier = array_shift($parts);
-        $id = implode('-', $parts);
-
-        switch($resourceIdentifier)
-        {
-            case 'cso':
-                $CSO = $this->getResource('CSO');
-                return $this->output($CSO->getJob($id));
-                break;
-
-            case 'oo':
-                $OpenOnderwijs = $this->getResource('OpenOnderwijs');
-                return $this->output($OpenOnderwijs->getJob($id));
-                break;
-        }
-    }
-
-    /**
      * Gets the jobs from te resources
      *
      * @param mixed $filter Array with filters

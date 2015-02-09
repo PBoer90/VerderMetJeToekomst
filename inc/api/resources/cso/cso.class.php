@@ -103,17 +103,19 @@ class Api_Resources_CSO extends Api_Resource_Base
     }
 
     /**
-     * Extracts data for the provided job code
+     * List of all the jobs
      *
-     * @param string $code The job code
-     * @return array JSON Object
+     * @param mixed $filter An array with filters
+     * @return array JSON object
      */
-    public function getJob($code)
+    public function getJobs($filter)
     {
-        $url = $this->getBaseUrl().'getJob.json';
+        $this->generateEnumeration('educations', 'branches');
 
-        // We want to see every field
-        // TODO - make it customizable
+        $url = $this->getBaseUrl().'getJobs.json';
+
+        $remoteJobFilter = $this->filter->create($filter, $this->enumeration);
+
         $jobFieldSelection = array(
             '__type__' => 'RemoteJobFieldselection',
             'jobContent' => array(
@@ -141,44 +143,12 @@ class Api_Resources_CSO extends Api_Resource_Base
             'organisation' => true
         );
 
-        $post = array(
-            'apiKey' => $this->getKey(),
-            'jobCode' => $code,
-            'remoteJobFieldSelection' => $jobFieldSelection
-        );
-
-        return $this->parser->parseJob($this->request($url, $post));
-    }
-
-    /**
-     * List of all the jobs
-     *
-     * @param mixed $filter An array with filters
-     * @return array JSON object
-     */
-    public function getJobs($filter)
-    {
-        $this->generateEnumeration('educations', 'branches');
-
-        $url = $this->getBaseUrl().'getJobs.json';
-
-        $remoteJobFilter = $this->filter->create($filter, $this->enumeration);
-
         if($this->filter->failed == false)
         {
             $post = array(
                 'apiKey' => $this->getKey(),
                 'filter' => $remoteJobFilter,
-                'fieldSelection' => array(
-                    '__type__' => 'RemoteJobFieldselection',
-                    'jobFeatures' => array(
-                        '__type__' => 'RemoteJobFeaturesFieldSelection',
-                        'detail' => true,
-                        'employmentConditions' => true,
-                        'location' => true,
-                    ),
-                    'organisation' => true
-                )
+                'fieldSelection' => $jobFieldSelection
             );
 
             return $this->parser->parseJobs($this->request($url, $post));
@@ -210,6 +180,13 @@ class Api_Resources_CSO extends Api_Resource_Base
                     {
                         $this->enumeration->setBranches($this->getJobCountForEnumeration('JobBranch'));
                     }
+                    break;
+
+                case 'regions':
+//                    if($this->enumeration->hasRegions() === false)
+//                    {
+//                        $this->enumeration->setBranches($this->getJobCountForEnumeration());
+//                    }
                     break;
             }
         }

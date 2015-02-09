@@ -89,7 +89,7 @@ class Api_Resources_OpenOnderwijs extends Api_Resource_Base
             $_branches = array();
 
             // we can only filter the enumeration from the jobs
-            $result = $this->request($this->getBaseUrl().'job_search', array(), false);
+            $result = $this->request($this->getBaseUrl().'job_search?size=2000', array(), false);
 
             if(isset($result->hits))
             {
