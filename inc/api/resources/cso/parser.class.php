@@ -49,7 +49,7 @@ class Api_Resources_CSO_Parser
                 $newJob['salary']['max'] = $job->features->employmentConditions->salaryMax;
                 $newJob['salary']['max'] = $job->features->employmentConditions->salaryMin;
 
-                $newJob['contractType'] = $job->features->employmentConditions->contractType->label;
+                $newJob['contractType'] = isset($job->features->employmentConditions->contractType->label) ? $job->features->employmentConditions->contractType->label : '';
 
                 $newJob['branches'] = $this->scan($job->features->featuresDetail->jobBranches, 'label');
 
