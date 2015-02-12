@@ -8,7 +8,6 @@ var carouselNavigation = $('#slide-navigation');
 var icon = carouselNavigation.find('i');
 var slides = setSlides();
 var goingBack = false;
-loadSlideButtons();
 
 /**
  * Init Carousel
@@ -41,6 +40,9 @@ $('#mainCarousel').on('slide.bs.carousel', function (slideEvent) {
         carouselNavigation.addClass('disappear');
         icon.addClass('half-rotate');
     }else{
+        if(currentSlide == 'choice-company')
+            console.log($('.dropdown').remove());
+
         Slide.getContent(currentSlide);
         if(carouselNavigation.hasClass('disappear'))
             carouselNavigation.removeClass('disappear');
@@ -70,7 +72,7 @@ function setSlides(){
  * @param x int|string
  */
 function goToSlide(x){
-    console.log('going to slide '+x);
+    //console.log('going to slide '+x);
     if(isInt(x)){
         Carousel.carousel(x);
     }else{
@@ -97,11 +99,14 @@ carouselNavigation.click(function(){
 /**
  * Load the slide buttons into the document
  * and make sure we can slide to a new slider after
- * an ajax request
+ * an ajax request, we also reinitialise the material script
  */
 function loadSlideButtons(){
     $('.btn-slide').click(function(){
         goToSlide($(this).attr('data-slider'));
     });
+    adapter.btnListener();
+
+    $.material.init();
 
 }

@@ -4,7 +4,7 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-* {
+.transition {
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
@@ -49,6 +49,11 @@ footer {
     z-index:1000;
 }
 
+.scroll-height{
+    max-height: 550px;
+    overflow-y: auto;
+}
+
 #slide-navigation{
     position: absolute;
     background-color: #FFFFFF;
@@ -70,8 +75,12 @@ footer {
 .disappear{
     opacity: 0 !important;
 }
+.mdi-navigation-arrow-back.transition::before {
+    display: inline-block;
+}
 
 .half-rotate{
+    display: inline-block;
     transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);

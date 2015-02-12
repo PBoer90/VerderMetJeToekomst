@@ -20,9 +20,6 @@
     <link href="css/icon-x.css" rel="stylesheet">
     <link href="material/css/ripples.min.css" rel="stylesheet">
     <link href="material/css/material-wfont.min.css" rel="stylesheet">
-    <link href="material/css/jquery.dropdown.css" rel="stylesheet">
-    <link href="css/dropdown.css" rel="stylesheet">
-
     <!-- Custom CSS -->
     <link href="css/full-slider.css" rel="stylesheet">
 
@@ -41,7 +38,7 @@
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <button class="btn" id="slide-navigation">
-                <i class="mdi-navigation-arrow-back icon-3x half-rotate" id="slide-navigation-btn"></i>
+                <i class="mdi-navigation-arrow-back icon-3x half-rotate transition" id="slide-navigation-btn"></i>
             </button>
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -161,6 +158,17 @@
                     </div>
                 </div>
             </div>
+            <div class="item" id="result">
+                <!-- Set the third background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('img/bg8.jpg');"></div>
+                <div class="carousel-content">
+                    <div class="container-fluid">
+                        <div class="row well well-opacity">
+                            <i class="mdi-notification-sync icon-10x rotating"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -230,7 +238,6 @@
     <script src="js/misc.js"></script>
     <script src="js/adapter.js"></script>
     <script src="js/slides.js"></script>
-    <script src="material/js/jquery.dropdown.js"></script>
     <script>
         //Init Material Scripts
         $(document).ready(function() {
