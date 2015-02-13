@@ -158,9 +158,9 @@
                     </div>
                 </div>
             </div>
-            <div class="item" id="result">
+            <div class="item" id="input-location">
                 <!-- Set the third background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('img/bg8.jpg');"></div>
+                <div class="fill" style="background-image:url('img/bg9.jpg');"></div>
                 <div class="carousel-content">
                     <div class="container-fluid">
                         <div class="row well well-opacity">
@@ -169,9 +169,9 @@
                     </div>
                 </div>
             </div>
-            <div class="item" id="input-location">
+            <div class="item" id="result">
                 <!-- Set the third background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('img/bg9.jpg');"></div>
+                <div class="fill" style="background-image:url('img/bg8.jpg');"></div>
                 <div class="carousel-content">
                     <div class="container-fluid">
                         <div class="row well well-opacity">
@@ -249,6 +249,7 @@
     <script src="js/misc.js"></script>
     <script src="js/adapter.js"></script>
     <script src="js/slides.js"></script>
+    <script src="js/location.js"></script>
     <script>
         //Init Material Scripts
         $(document).ready(function() {

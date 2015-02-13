@@ -75,7 +75,6 @@ function goToSlide(x){
     if(isInt(x)){
         Carousel.carousel(x);
     }else{
-        console.log(slides[x]);
         Carousel.carousel(slides[x]);
     }
 }

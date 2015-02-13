@@ -29,3 +29,7 @@ input:-webkit-autofill {
     -ms-transition: opacity .5s ease-in-out;
     transition: opacity .5s ease-in-out;
 }
+
+#get-location{
+    cursor:pointer;
+}

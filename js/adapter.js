@@ -43,13 +43,19 @@ var adapter = {
          else
             return false;
       });
+
+      $('.btn-search').click(function(){
+         adapter.searchLocation = $('#location').val();
+         goToSlide('result');
+      });
    },
 
    createJson : function(){
       return JSON.stringify({
-         'searchType' : this.searchType,
-         'education' : this.education,
-         'sector' : this.sector
+         searchType : this.searchType,
+         education : this.education,
+         sector : this.sector,
+         location : this.searchLocation
       });
    }
 

@@ -2,9 +2,20 @@
     <div class ="col-lg-12 ">
         <h1 class="welcome">Op welke locatie wil je zoeken ?</h1>
     </div>
-    <div class="col-lg-12">
+    <div class="col-lg-11">
         <input type="text" class="form-control input-lg text-center" id="location" placeholder="Vul je gewenste locatie in">
     </div>
-
-    <div class="btn btn-primary btn-sector btn-slide" data-slider="input-location">Zoeken</div>
+    <div class="col-lg-1">
+        <i id="get-location" class="mdi-maps-place icon-2x" data-toggle="tooltip" data-placement="right" title="" data-original-title="Klik om locatie op te halen"></i>
+    </div>
+    <div class="btn btn-primary btn-sector btn-search">Zoeken</div>
 </div>
+
+<script>
+    adapter.btnListener();
+    var locButton = $('#get-location');
+    locButton.tooltip('show');
+    locButton.click(function(){
+        htmlLocation.getPositionString();
+    });
+</script>
