@@ -43,22 +43,26 @@ function initialize() {
 
 
 function fixApiMarkers(){
-    $.getJSON('http://toekomst.timodejong.com/data.php?educations='+adapter.education+'&sector='+adapter.sector+'&q='+adapter.searchLocation, function(data){
-        console.log(data[0]['name']);
-        var contentString = '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">heading</h1>'+
-            '<div id="bodyContent">'+
-            '<p>body</p>'+
-            '</div>'+
-            '</div>';
+    $.getJSON('http://verdermetjetoekomst.nl/data.php?educations='+adapter.education+'&sector='+adapter.sector+'&q='+adapter.searchLocation, function(data){
+        for(var i = 0; i < data.length; i++) {
 
-        var infowindow = new google.maps.InfoWindow({
-            content: contentString
-        });
+            var contentString = '<div id="content">' +
+                '<div id="siteNotice">' +
+                '</div>' +
+                '<h1 id="firstHeading" class="firstHeading">'+data[i]['name']+'</h1>' +
+                '<div id="bodyContent">' +
+                '<p>Aangeboden door:<br/> <i>'+data[i]['organisation']['name']+'</i></p>' +
+                '</div>' +
+                '</div>';
 
-        var maplocation = new google.maps.LatLng(longLat.lat, longLat.lng);
-        addMarker(maplocation, 'http://icons.iconarchive.com/icons/custom-icon-design/mono-business/48/company-building-icon.png', 'title', infowindow);
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString
+            });
+
+            var maplocation = new google.maps.LatLng(data[i]['location']['latitude'], data[i]['location']['longitude']);
+            addMarker(maplocation, 'http://icons.iconarchive.com/icons/custom-icon-design/mono-business/48/company-building-icon.png', 'title', infowindow);
+
+            $('#api-loader').remove();
+        }
     });
 }

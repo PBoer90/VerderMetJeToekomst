@@ -16,6 +16,20 @@
     </div>
 </div>
 
+<div class="modal show" id="api-loader">
+    <div class="modal-dialog" style="margin-top:70px">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <h4 class="modal-title">Bezig met ophalen vacatures van Open Onderwijs en CSO... </h4>
+            </div>
+            <div class="modal-body text-center">
+                <i class="mdi-notification-sync icon-10x rotating "></i><br/>
+                <small>Dit kan tot 30 seconden duren...</small>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+
 <script>
     var mapOptions = {};
     console.log('http://maps.googleapis.com/maps/api/geocode/json?address='+encodeURIComponent(adapter.searchLocation));
@@ -30,7 +44,7 @@
                zoom: 12
            };
 
-//           fixApiMarkers();
+           fixApiMarkers();
 
            initialize();
        }else{

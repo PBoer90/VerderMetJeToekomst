@@ -53,12 +53,12 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navbar-mobile">
                 <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#" data-toggle="modal" data-target="#company-dialog">Bedrijven</a>
-                    </li>
-                    <li>
-                        <a href="#" data-toggle="modal" data-target="#student-dialog">Studenten</a>
-                    </li>
+<!--                    <li>-->
+<!--                        <a href="#" data-toggle="modal" data-target="#company-dialog">Bedrijven</a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a href="#" data-toggle="modal" data-target="#student-dialog">Studenten</a>-->
+<!--                    </li>-->
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -175,7 +175,7 @@
                 <div class="carousel-content">
                     <div class="container-fluid" id="map-canvas">
                         <div class="row well well-opacity">
-                            <i class="mdi-notification-sync icon-10x rotating"></i>
+                            <i class="mdi-notification-sync icon-10x rotating"></i><br/>
                         </div>
                     </div>
                 </div>
