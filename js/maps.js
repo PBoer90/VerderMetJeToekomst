@@ -43,7 +43,7 @@ function initialize() {
 
 
 function fixApiMarkers(){
-    $.getJSON('http://verdermetjetoekomst.nl/data.php?educations='+adapter.education+'&sector='+adapter.sector+'&q='+adapter.searchLocation, function(data){
+    $.getJSON('http://verdermetjetoekomst.nl/data.php?educations='+adapter.education+'&sector='+adapter.sector+'&region='+adapter.searchLocation, function(data){
         for(var i = 0; i < data.length; i++) {
 
             var contentString = '<div id="content">' +
