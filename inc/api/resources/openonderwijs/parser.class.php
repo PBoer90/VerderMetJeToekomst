@@ -28,11 +28,11 @@ class Api_Resources_OpenOnderwijs_Parser
                 $newJob['jobCount'] = '1';
 
                 $newJob['name'] = isset($job->_source->title) ? $job->_source->title : '';
-                $newJob['description'] = isset($job->_source->fulltxt) ? $job->_source->fulltxt : '';
-                $newJob['requirements'] = isset($job->_source->conditions_descr) ? $job->_source->conditions_descr : '';
-                $newJob['otherDetails'] = ''; // ??
+//                $newJob['description'] = isset($job->_source->fulltxt) ? $job->_source->fulltxt : '';
+//                $newJob['requirements'] = isset($job->_source->conditions_descr) ? $job->_source->conditions_descr : '';
+//                $newJob['otherDetails'] = ''; // ??
 
-                $newJob['employer']['description'] = isset($job->_source->employer_descr) ? $job->_source->employer_descr : '';
+//                $newJob['employer']['description'] = isset($job->_source->employer_descr) ? $job->_source->employer_descr : '';
 
                 $newJob['organisation']['name'] = isset($job->_source->organization_name) ? $job->_source->organization_name : '';
                 $newJob['organisation']['size'] = isset($job->_source->org_size) ? $job->_source->org_size : '';

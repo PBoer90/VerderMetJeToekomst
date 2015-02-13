@@ -30,11 +30,11 @@ class Api_Resources_CSO_Parser
                 $newJob['jobCount'] = $job->features->featuresDetail->jobCount;
 
                 $newJob['name'] = $job->content->name;
-                $newJob['description'] = $job->content->description;
-                $newJob['requirements'] = $job->content->requirements;
-                $newJob['otherDetails'] = $job->content->otherDetails;
+//                $newJob['description'] = $job->content->description;
+//                $newJob['requirements'] = $job->content->requirements;
+//                $newJob['otherDetails'] = $job->content->otherDetails;
 
-                $newJob['employer']['description'] = $job->content->employer->description;
+//                $newJob['employer']['description'] = $job->content->employer->description;
 
                 $newJob['organisation']['name'] = $job->organisation->name;
                 $newJob['organisation']['size'] = '';
