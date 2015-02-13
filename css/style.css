@@ -16,6 +16,16 @@
     justify-content: space-between;
 }
 
-#sector-dropdown{
-    text-align: center;
+input:-webkit-autofill {
+    -webkit-box-shadow: inset 0 0 0 1000px white !important;
+}
+
+.sector-forward{
+    cursor: default !important;
+    opacity: 0;
+    -webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    -ms-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
 }

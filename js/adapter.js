@@ -29,6 +29,19 @@ var adapter = {
 
       $('.dropdown').change(function(){
          adapter.sector = $(this).val();
+
+         var forward = $('.sector-forward');
+         var forwardButton = forward.find('i');
+         forward.addClass('appear');
+         if(forwardButton.hasClass('half-rotate'))
+            forwardButton.removeClass('half-rotate');
+      });
+
+      $('.sector-forward').click(function() {
+         if($(this).hasClass('appear'))
+            goToSlide('input-location');
+         else
+            return false;
       });
    },
 

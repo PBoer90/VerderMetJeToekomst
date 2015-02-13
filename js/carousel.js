@@ -37,6 +37,8 @@ $('#mainCarousel').on('slide.bs.carousel', function (slideEvent) {
 
     if(currentSlide == 'choice-welcome'){
         slideHistory.length = 0;
+        if(carouselNavigation.hasClass('appear'))
+            carouselNavigation.removeClass('appear');
         carouselNavigation.addClass('disappear');
         icon.addClass('half-rotate');
     }else{

@@ -169,6 +169,17 @@
                     </div>
                 </div>
             </div>
+            <div class="item" id="input-location">
+                <!-- Set the third background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('img/bg9.jpg');"></div>
+                <div class="carousel-content">
+                    <div class="container-fluid">
+                        <div class="row well well-opacity">
+                            <i class="mdi-notification-sync icon-10x rotating"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 

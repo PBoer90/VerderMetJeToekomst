@@ -69,6 +69,7 @@ footer {
 }
 
 .appear{
+    cursor: pointer !important;
     opacity: 1 !important;
 }
 

@@ -18,11 +18,7 @@ var Slide = {
             }
 
             for(var i = 0; i < data.length; i++){
-                htmlString += '<option value="'+stringFix(data[i])+'"';
-                if(adapter.sector == stringFix(data[i])){
-                    htmlString += ' selected="selected"';
-                }
-                htmlString += '>';
+                htmlString += '<option value="'+stringFix(data[i])+'">';
                 htmlString += data[i];
                 htmlString += '</option>';
             }
