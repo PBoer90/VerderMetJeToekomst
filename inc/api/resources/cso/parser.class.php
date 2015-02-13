@@ -7,8 +7,6 @@ class Api_Resources_CSO_Parser
      *
      * @param array $jobs JSON Object with all the jobs
      * @return array Standard array output for jobs
-     *
-     * @TODO - Some jobs got empty latitude and longitude
      */
     public function parseJobs($jobs)
     {
@@ -20,6 +18,7 @@ class Api_Resources_CSO_Parser
 
             foreach($jobs as $job)
             {
+                // job without coords
                 if(!isset($job->features->location->latitude))
                 {
                     continue;
@@ -30,7 +29,7 @@ class Api_Resources_CSO_Parser
                 $newJob['jobCount'] = $job->features->featuresDetail->jobCount;
 
                 $newJob['name'] = $job->content->name;
-                $newJob['url'] = $job->features->onlineApplicationUrl;
+                $newJob['url'] = !empty($job->features->onlineApplicationUrl) ? $job->features->onlineApplicationUrl : '';
 //                $newJob['description'] = $job->content->description;
 //                $newJob['requirements'] = $job->content->requirements;
 //                $newJob['otherDetails'] = $job->content->otherDetails;

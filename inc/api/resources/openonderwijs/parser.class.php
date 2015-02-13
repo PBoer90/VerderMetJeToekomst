@@ -7,8 +7,6 @@ class Api_Resources_OpenOnderwijs_Parser
      *
      * @param array $jobs JSON Object with all the jobs
      * @return array Standard array output for jobs
-     *
-     * @TODO - Some jobs got empty latitude and longitude
      */
     public function parseJobs($jobs)
     {
@@ -18,7 +16,14 @@ class Api_Resources_OpenOnderwijs_Parser
         {
             foreach($jobs->hits->hits as $job)
             {
+                // job without coords
                 if(!isset($job->_source->job_location_latitude))
+                {
+                    continue;
+                }
+
+                // job expired
+                if(isset($job->_source->expired_at))
                 {
                     continue;
                 }

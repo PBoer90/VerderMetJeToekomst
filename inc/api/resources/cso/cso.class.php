@@ -120,26 +120,26 @@ class Api_Resources_CSO extends Api_Resource_Base
             '__type__' => 'RemoteJobFieldselection',
             'jobContent' => array(
                 '__type__' => 'RemoteJobContentFieldSelection',
-                'department' => true,
-                'employer' => true
+//                'department' => true,
+//                'employer' => true
             ),
-            'jobExtraFields' => true,
+//            'jobExtraFields' => true,
             'jobFeatures' => array(
                 '__type__' => 'RemoteJobFeaturesFieldSelection',
-                'applicationContact' => true,
-                'applicationProcedureContact' => true,
+//                'applicationContact' => true,
+//                'applicationProcedureContact' => true,
                 'applicationTypes' => true,
                 'detail' => true,
                 'employmentConditions' => true,
-                'informationContact' => true,
+//                'informationContact' => true,
                 'location' => true,
-                'onlineJobApplicationTypes' => true,
-                'tvDistinction' => true
+//                'onlineJobApplicationTypes' => true,
+//                'tvDistinction' => true
             ),
-            'jobPublication' => array(
-                '__type__' => 'RemoteJobPublicationDataFieldSelection',
-                'publicationSets' => true
-            ),
+//            'jobPublication' => array(
+//                '__type__' => 'RemoteJobPublicationDataFieldSelection',
+//                'publicationSets' => true
+//            ),
             'organisation' => true
         );
 
