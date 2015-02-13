@@ -28,6 +28,7 @@ class Api_Resources_OpenOnderwijs_Parser
                 $newJob['jobCount'] = '1';
 
                 $newJob['name'] = isset($job->_source->title) ? $job->_source->title : '';
+                $newJob['url'] = isset($job->_source->source_url) ? $job->_source->source_url : '';
 //                $newJob['description'] = isset($job->_source->fulltxt) ? $job->_source->fulltxt : '';
 //                $newJob['requirements'] = isset($job->_source->conditions_descr) ? $job->_source->conditions_descr : '';
 //                $newJob['otherDetails'] = ''; // ??

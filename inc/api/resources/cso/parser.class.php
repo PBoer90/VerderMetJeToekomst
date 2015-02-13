@@ -30,6 +30,7 @@ class Api_Resources_CSO_Parser
                 $newJob['jobCount'] = $job->features->featuresDetail->jobCount;
 
                 $newJob['name'] = $job->content->name;
+                $newJob['url'] = $job->features->onlineApplicationUrl;
 //                $newJob['description'] = $job->content->description;
 //                $newJob['requirements'] = $job->content->requirements;
 //                $newJob['otherDetails'] = $job->content->otherDetails;
