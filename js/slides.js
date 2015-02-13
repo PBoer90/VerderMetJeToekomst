@@ -9,7 +9,7 @@ var Slide = {
     },
 
     getSectorChoice : function(){
-        $.get('dummy/branches.json', function(data){
+        $.get('data/branches.json', function(data){
             var htmlString = '<div class="form-control-wrapper">';
             htmlString += '<select class="form-control white dropdown sector-data-'+adapter.education+'" id="sector-dropdown" placeholder="Sector">';
 
