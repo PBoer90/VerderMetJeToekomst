@@ -5,17 +5,17 @@ class Api_Resources_CSO extends Api_Resource_Base
     /**
      * @var Api_Resources_CSO_Enumeration $enumeration The Enumeration object
      */
-    public $enumeration;
+    protected $enumeration;
 
     /**
      * @var Api_Resources_CSO_Filter $filter The filter object
      */
-    private $filter;
+    protected $filter;
 
     /**
      * @var Api_Resources_CSO_Parser $parser The parser object
      */
-    private $parser;
+    protected $parser;
 
     /**
      * @var string $username The Api user name
@@ -103,17 +103,19 @@ class Api_Resources_CSO extends Api_Resource_Base
     }
 
     /**
-     * Extracts data for the provided job code
+     * List of all the jobs
      *
-     * @param string $code The job code
-     * @return array JSON Object
+     * @param mixed $filter An array with filters
+     * @return array JSON object
      */
-    public function getJob($code)
+    public function getJobs($filter)
     {
-        $url = $this->getBaseUrl().'getJob.json';
+        $this->generateEnumeration('educations', 'branches');
 
-        // We want to see every field
-        // TODO - make it customizable
+        $url = $this->getBaseUrl().'getJobs.json';
+
+        $remoteJobFilter = $this->filter->create($filter, $this->enumeration);
+
         $jobFieldSelection = array(
             '__type__' => 'RemoteJobFieldselection',
             'jobContent' => array(
@@ -141,45 +143,76 @@ class Api_Resources_CSO extends Api_Resource_Base
             'organisation' => true
         );
 
-        $post = array(
-            'apiKey' => $this->getKey(),
-            'jobCode' => $code,
-            'remoteJobFieldSelection' => $jobFieldSelection
-        );
+        if($this->filter->failed == false)
+        {
+            $post = array(
+                'apiKey' => $this->getKey(),
+                'filter' => $remoteJobFilter,
+                'fieldSelection' => $jobFieldSelection
+            );
 
-        return $this->parser->parseJob($this->request($url, $post));
+            return $this->parser->parseJobs($this->request($url, $post));
+        }
+
+        return array();
     }
 
     /**
-     * List of all the jobs
-     *
-     * @param mixed $filter An array with filters
-     * @return array JSON object
+     * Generates the provided enumeration(s)
      */
-    public function getJobs($filter)
+    protected function generateEnumeration()
     {
-        $url = $this->getBaseUrl().'getJobs.json';
+        $indicators = func_get_args();
 
-        $remoteJobFilter = $this->filter->create($filter, $this->enumeration);
+        foreach($indicators as $indicator)
+        {
+            switch($indicator)
+            {
+                case 'educations':
+                    if($this->enumeration->hasEducations() === false)
+                    {
+                        $this->enumeration->setEducations($this->getJobCountForEnumeration('EducationLevel'));
+                    }
+                    break;
+
+                case 'branches':
+                    if($this->enumeration->hasBranches() === false)
+                    {
+                        $this->enumeration->setBranches($this->getJobCountForEnumeration('JobBranch'));
+                    }
+                    break;
+
+                case 'regions':
+//                    if($this->enumeration->hasRegions() === false)
+//                    {
+//                        $this->enumeration->setBranches($this->getJobCountForEnumeration());
+//                    }
+                    break;
+            }
+        }
+    }
+
+    /**
+     * Extracts data for the enumeration type that is provided
+     *
+     * @param string $enumerationType EducationLevel|JobBranch|JobCategory|ContractType|Region
+     * @return array JSON Object
+     */
+    private function getJobCountForEnumeration($enumerationType)
+    {
+        $url = $this->getBaseUrl().'getJobCountForEnumeration.json';
 
         $post = array(
             'apiKey' => $this->getKey(),
-            'filter' => $remoteJobFilter,
-            'fieldSelection' => array(
-                '__type__' => 'RemoteJobFieldselection',
-                'jobFeatures' => array(
-                    '__type__' => 'RemoteJobFeaturesFieldSelection',
-                    'detail' => true,
-                    'employmentConditions' => true,
-                    'location' => true,
-                ),
-                'organisation' => true
+            'enumerationType' => $enumerationType,
+            'filter' => array(
+                '__type__' => 'RemoteJobFilter'
             )
+
         );
 
-        return $this->parser->parseJobs($this->request($url, $post));
+        return $this->parser->parseEnumeration($this->request($url, $post));
     }
-
 
     /**
      * @return string

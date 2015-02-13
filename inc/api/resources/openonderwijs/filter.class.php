@@ -8,6 +8,11 @@ class Api_Resources_OpenOnderwijs_Filter
     public $enumeration;
 
     /**
+     * @var bool $failed If false then the filter failed while creating
+     */
+    public $failed =  false;
+
+    /**
      * Creates the filter array
      *
      * @param array $filter Options we want to filter
@@ -34,6 +39,8 @@ class Api_Resources_OpenOnderwijs_Filter
             }
         }
 
+        array_push($_filter, 'size=1000');
+
         return '?'.implode('&', $_filter);
     }
 
@@ -45,16 +52,89 @@ class Api_Resources_OpenOnderwijs_Filter
      */
     public function createEducationFilter(&$_filter, $education)
     {
+        $educations = $this->enumeration->getEducations();
+
         if($education !== null)
         {
             if(is_array($education))
             {
-                array_push($_filter, 'education_levels='.implode(',', $education));
+                foreach($education as $_education)
+                {
+                    if(!in_array($_education, $educations))
+                    {
+                        $this->failed = true;
+                    }
+                }
+
+                array_push($_filter, 'education_level='.implode(',', $education));
             }
 
             if(is_string($education))
             {
-                array_push($_filter, 'education_levels='.$education);
+                if(!in_array($education, $educations))
+                {
+                    $this->failed = true;
+                }
+                array_push($_filter, 'education_level='.$education);
+            }
+        }
+    }
+
+    /**
+     * Creates branch filter part
+     *
+     * @param array $_filter The filter array
+     * @param array|string $branch The branch(es)
+     */
+    public function createBranchFilter(&$_filter, $branch)
+    {
+        $branches = $this->enumeration->getBranches();
+
+        if($branch !== null)
+        {
+            if(is_array($branch))
+            {
+                foreach($branch as $_branch)
+                {
+                    if(!in_array($_branch, $branches))
+                    {
+                        $this->failed = true;
+                    }
+                }
+
+                array_push($_filter, 'sector='.implode(',', $branch));
+            }
+
+            if(is_string($branch))
+            {
+                if(!in_array($branch, $branches))
+                {
+                    $this->failed = true;
+                }
+
+                array_push($_filter, 'sector='.$branch);
+            }
+        }
+    }
+
+    /**
+     * Creates region filter part
+     *
+     * @param array $_filter The filter array
+     * @param array|string $region The region(s)
+     */
+    public function createRegionFilter(&$_filter, $region)
+    {
+        if($region !== null)
+        {
+            if(is_array($region))
+            {
+                array_push($_filter, 'q='.implode(',', $region));
+            }
+
+            if(is_string($region))
+            {
+                array_push($_filter, 'q='.$region);
             }
         }
     }

@@ -2,6 +2,7 @@
 
 // Resources
 require_once 'resources/base.class.php';
+require_once 'resources/enumeration.class.php';
 require_once 'resources/cso/cso.class.php';
 require_once 'resources/cso/enumeration.class.php';
 require_once 'resources/cso/filter.class.php';
@@ -32,31 +33,6 @@ class Api
     }
 
     /**
-     * Gets all information from one job
-     *
-     * @param string $id The job id
-     */
-    public function getJob($id)
-    {
-        $parts = explode('-', $id);
-        $resourceIdentifier = array_shift($parts);
-        $id = implode('-', $parts);
-
-        switch($resourceIdentifier)
-        {
-            case 'cso':
-                $CSO = $this->getResource('CSO');
-                return $CSO->getJob($id);
-                break;
-
-            case 'oo':
-                $OpenOnderwijs = $this->getResource('OpenOnderwijs');
-                return $OpenOnderwijs->getJob($id);
-                break;
-        }
-    }
-
-    /**
      * Gets the jobs from te resources
      *
      * @param mixed $filter Array with filters
@@ -78,35 +54,68 @@ class Api
             array_push($jobs, $job);
         }
 
-        return $jobs;
+        return $this->output($jobs);
+    }
+
+    /**
+     * Returns all possible branches
+     *
+     * @param bool $json [optional] Output json
+     * @return string Branches
+     */
+    public function getBranches($json = true)
+    {
+        $branches = array();
+
+        $CSO = $this->getResource('CSO');
+        $branches = array_merge($branches, $CSO->getBranches());
+
+        $OpenOnderwijs = $this->getResource('OpenOnderwijs');
+        $branches = array_merge($branches, $OpenOnderwijs->getBranches());
+
+        // prevent duplicated
+        $branches = array_unique($branches);
+        $branches = array_values($branches);
+
+        if($json === true)
+        {
+            return $this->output($branches);
+        }
+        else
+        {
+            return $branches;
+        }
     }
 
     /**
      * Gets all the educations we got
      *
-     * @return array Educations
+     * @param bool $json [optional] Output json
+     * @return string Educations
      */
-    public function getEducations()
+    public function getEducations($json = true)
     {
         $educations = array();
 
         $CSO = $this->getResource('CSO');
-        $educations = array_merge($educations, $CSO->enumeration->getEducations());
+        $educations = array_merge($educations, $CSO->getEducations());
 
         $OpenOnderwijs = $this->getResource('OpenOnderwijs');
-        $educations = array_merge($educations, $OpenOnderwijs->enumeration->getEducations());
+        $educations = array_merge($educations, $OpenOnderwijs->getEducations());
 
-        return array_unique($educations);
-    }
+        // prevent duplicated
+        $educations = array_unique($educations);
+        $educations = array_values($educations);
 
-    public function getRegions()
-    {
-        $regions = array();
 
-        $CSO = $this->getResource('CSO');
-        $regions = array_merge($regions, $CSO->enumeration->getRegions());
-
-        return $regions;
+        if($json === true)
+        {
+            return $this->output($educations);
+        }
+        else
+        {
+            return $educations;
+        }
     }
 
     /**
@@ -132,5 +141,16 @@ class Api
         {
             return $this->resources[$name];
         }
+    }
+
+    /**
+     * Json encodes the data for output
+     *
+     * @param array $data
+     * @return string JSON
+     */
+    private function output($data)
+    {
+        return json_encode($data);
     }
 }

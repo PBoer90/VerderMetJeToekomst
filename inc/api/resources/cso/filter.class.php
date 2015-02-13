@@ -8,6 +8,11 @@ class Api_Resources_CSO_Filter
     public $enumeration;
 
     /**
+     * @var bool $failed If false then the filter failed while creating
+     */
+    public $failed =  false;
+
+    /**
      * Creates the filter array
      *
      * @param array $filter Options we want to filter
@@ -78,9 +83,51 @@ class Api_Resources_CSO_Filter
                         'code' => $educationCode
                     );
                 }
+                else
+                {
+                    $this->failed = true;
+                }
             }
         }
     }
+
+    /**
+     * Creates branch filter
+     *
+     * @param array $_filter The filter array
+     * @param array|string $branch The branch(es)
+     */
+    public function createBranchFilter(&$_filter, $branch)
+    {
+        if($branch !== null)
+        {
+            if(is_array($branch))
+            {
+                foreach($branch as $value)
+                {
+                    $this->createBranchFilter($_filter, $value);
+                }
+            }
+
+            if(is_string($branch))
+            {
+                $branchCode = $this->enumeration->getBranchCode($branch);
+
+                if($branchCode != false)
+                {
+                    $_filter['featuresFilter']['detailFilter']['jobBranches'][] = array(
+                        '__type__' => 'JobBranch',
+                        'code' => $branchCode
+                    );
+                }
+                else
+                {
+                    $this->failed = true;
+                }
+            }
+        }
+    }
+
 
     /**
      * Creates regions filter part
@@ -110,6 +157,10 @@ class Api_Resources_CSO_Filter
                         '__type__' => 'Region',
                         'code' => $regionCode
                     );
+                }
+                else
+                {
+                    $this->failed = true;
                 }
             }
         }
