@@ -8,7 +8,7 @@ require_once 'inc/api/api.class.php';
 $api = new Api();
 
 $dataDirectory = 'data/';
-$cacheTime = 1;//7200; // 2 hours
+$cacheTime = 7200; // 2 hours
 
 $filename = $dataDirectory.md5($_SERVER['REQUEST_URI']).'.json';
 
