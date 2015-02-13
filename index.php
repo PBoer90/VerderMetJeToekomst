@@ -242,6 +242,7 @@
         //Init Material Scripts
         $(document).ready(function() {
             $.material.init();
+            loadSlideButtons();
        });
     </script>
 

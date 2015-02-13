@@ -27,10 +27,9 @@ var adapter = {
          adapter.education = stringFix($(this).text());
       });
 
-      $('.btn-sector').click(function(){
-         adapter.sector = stringFix($('.sector-data-'+adapter.education).last().val());
+      $('.dropdown').change(function(){
+         adapter.sector = $(this).val();
       });
-      $('.sector-data-'+adapter.education).remove();
    },
 
    createJson : function(){
@@ -43,4 +42,3 @@ var adapter = {
 
 
 };
-loadSlideButtons();

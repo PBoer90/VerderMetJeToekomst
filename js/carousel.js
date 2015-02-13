@@ -40,9 +40,6 @@ $('#mainCarousel').on('slide.bs.carousel', function (slideEvent) {
         carouselNavigation.addClass('disappear');
         icon.addClass('half-rotate');
     }else{
-        if(currentSlide == 'choice-company')
-            console.log($('.dropdown').remove());
-
         Slide.getContent(currentSlide);
         if(carouselNavigation.hasClass('disappear'))
             carouselNavigation.removeClass('disappear');
