@@ -8,7 +8,7 @@ require_once 'inc/api/api.class.php';
 $api = new Api();
 
 $dataDirectory = 'data/';
-$cacheTime = 200;
+$cacheTime = 7200; // 2 hours
 
 $filename = $dataDirectory.md5($_SERVER['REQUEST_URI']).'.json';
 
@@ -25,7 +25,20 @@ if(((is_file($filename)) && ((filemtime($filename) + $cacheTime) < time())) || !
         {
             list($key, $value) = explode('=', $param);
 
-            $filter[$key] = explode(',', $value);
+            if($key == 'region' && strstr($value, ', Nederland'))
+            {
+                $value = str_replace(', Nederland', '', $value);
+            }
+
+            $value = explode(',', $value);
+
+            foreach($value as &$_value)
+            {
+                $_value = str_replace(array('_', '-'), array(' ', '/'), $_value);
+                $_value = trim($_value);
+            }
+
+            $filter[$key] = $value;
         }
     }
 
