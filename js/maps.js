@@ -43,26 +43,38 @@ function initialize() {
 
 
 function fixApiMarkers(){
-    $.getJSON('http://verdermetjetoekomst.nl/data.php?educations='+adapter.education+'&sector='+adapter.sector+'&region='+adapter.searchLocation, function(data){
-        for(var i = 0; i < data.length; i++) {
+    $.getJSON('http://www.verdermetjetoekomst.nl/data.php?education='+adapter.education+'&branch='+adapter.sector+'&region='+adapter.searchLocation, function(data){
+        if(data.length > 0){
+            for(var i = 0; i < data.length; i++) {
 
-            var contentString = '<div id="content">' +
-                '<div id="siteNotice">' +
-                '</div>' +
-                '<h1 id="firstHeading" class="firstHeading">'+data[i]['name']+'</h1>' +
-                '<div id="bodyContent">' +
-                '<p>Aangeboden door:<br/> <i>'+data[i]['organisation']['name']+'</i></p>' +
-                '</div>' +
-                '</div>';
+                var contentString = '<div id="content">' +
+                    '<div id="siteNotice">' +
+                    '</div>' +
+                    '<h1 id="firstHeading" class="firstHeading">'+data[i]['name']+'</h1>' +
+                    '<div id="bodyContent">' +
+                    '<p>Aangeboden door:<br/> <i>'+
+                    (data[i]['url'] != 'undefined' ? '<a href="'+data[i]['url']+'" target="_blank">' : '') +
+                    data[i]['organisation']['name']+
+                    (data[i]['url'] != 'undefiend' ? '</a>' : '') +
+                    '</i></p>' +
+                    '</div>' +
+                    '</div>';
 
-            var infowindow = new google.maps.InfoWindow({
-                content: contentString
-            });
+                var infowindow = new google.maps.InfoWindow({
+                    content: contentString
+                });
 
-            var maplocation = new google.maps.LatLng(data[i]['location']['latitude'], data[i]['location']['longitude']);
-            addMarker(maplocation, 'http://icons.iconarchive.com/icons/custom-icon-design/mono-business/48/company-building-icon.png', 'title', infowindow);
+                var maplocation = new google.maps.LatLng(data[i]['location']['latitude'], data[i]['location']['longitude']);
+                addMarker(maplocation, 'http://icons.iconarchive.com/icons/custom-icon-design/mono-business/48/company-building-icon.png', 'title', infowindow);
 
-            $('#api-loader').remove();
+                $('#api-loader').remove();
+            }
+        } else {
+            $('.modal-title').html('Helaas, er is geen vacature gevonden').css({'text-align': 'center'});
+            $('.modal-body.text-center').html('<p>Kies een andere</p><div class="row">' +
+            '<div class="col-sm-5"><div class="btn btn-primary" onClick="goToSlide(\'choice-company-'+adapter.education.toLowerCase()+'\');">sector</div></div>' +
+            '<div class="col-sm-2" style="padding:10px 0;">of</div>' +
+            '<div class="col-sm-5"><div class="btn btn-primary" onClick="goToSlide(\'choice-company\');">opleidings niveau</div></div>');
         }
     });
 }
