@@ -2,6 +2,11 @@
     cursor: pointer;
 }
 
+.modal{
+    color:#000000 !important;
+    text-align: left !important;
+}
+
 .flex-row {
     display: flex;
     flex-direction: row;

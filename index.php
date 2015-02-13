@@ -171,9 +171,9 @@
             </div>
             <div class="item" id="result">
                 <!-- Set the third background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('img/bg8.jpg');"></div>
+                <div class="fill" id="map-canvas"></div>
                 <div class="carousel-content">
-                    <div class="container-fluid">
+                    <div class="container-fluid" id="map-canvas">
                         <div class="row well well-opacity">
                             <i class="mdi-notification-sync icon-10x rotating"></i>
                         </div>
@@ -245,12 +245,14 @@
 
     <script src="material/js/ripples.min.js"></script>
     <script src="material/js/material.min.js"></script>
+    <script src="js/maps.js"></script>
     <script src="js/carousel.js"></script>
     <script src="js/misc.js"></script>
     <script src="js/adapter.js"></script>
     <script src="js/slides.js"></script>
     <script src="js/location.js"></script>
-    <script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBnMvVd2Li0Zqg7kNTrkfbAN3QE-ddZ_w"></script>
+    <script type="text/javascript">
         //Init Material Scripts
         $(document).ready(function() {
             $.material.init();

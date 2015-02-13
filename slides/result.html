@@ -1,9 +1,50 @@
-<div class="row well well-opacity">
-    <div class ="col-lg-12 result">
-
+<!-- Modal -->
+<div class="modal fade" id="locationError" tabindex="-1" role="dialog" aria-labelledby="locationNotFound" aria-hidden="true" >
+    <div class="modal-dialog" style="margin-top:100px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="locationNotFound">Locatie niet gevonden</h4>
+            </div>
+            <div class="modal-body">
+                <p>We konden je ingevulde locatie niet vinden. Druk op de pijl links bovenin om het opnieuw te proberen.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Afsluiten</button>
+            </div>
+        </div>
     </div>
 </div>
 
 <script>
-    $('.result').html(adapter.createJson());
+    var mapOptions = {};
+    console.log('http://maps.googleapis.com/maps/api/geocode/json?address='+encodeURIComponent(adapter.searchLocation));
+    $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address='+encodeURIComponent(adapter.searchLocation), function(data){
+       if(data['status'] == 'OK'){
+
+           var longLat = data['results'][0]['geometry']['location'];
+
+            mapOptions = {
+               center: {lat: longLat.lat, lng: longLat.lng},
+               disableDefaultUI: true,
+               zoom: 12
+           };
+
+//           fixApiMarkers();
+
+           initialize();
+       }else{
+           mapOptions = {
+               center: {lat: 52, lng: 6},
+               disableDefaultUI: true,
+               zoom: 6
+           };
+
+           $('#locationError').modal();
+           initialize();
+       }
+    });
+
 </script>
+
+
